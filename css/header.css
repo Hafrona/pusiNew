@@ -97,7 +97,7 @@ body {
   align-items: center;
 }
 .foot .foot-content .foot-map {
-  width: 37%;
+  width: 540px;
   height: 285px;
   border-radius: 10px ;
   background-color: #fdfdfd;
@@ -109,7 +109,7 @@ body {
   height: 100%;
   border-radius: 10px;
 }
-.foot .foot-content .foot-call {
+.foot .foot-content .foot-links {
   width: 37%;
 }
 .foot .foot-content .foot-WeChat {
