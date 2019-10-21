@@ -103,6 +103,7 @@ body {
   background-color: #fdfdfd;
   padding: 5px;
   box-sizing: border-box;
+  margin-right: 20px;
 }
 .foot .foot-content .foot-map .map {
   width: 100%;
@@ -110,8 +111,21 @@ body {
   border-radius: 10px;
 }
 .foot .foot-content .foot-links {
-  width: 37%;
+  width: 486px;
+  height: 221px;
+}
+.foot .foot-content .foot-links h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.foot .foot-content .foot-links ul li {
+  height: 35px;
+  font-size: 14px;
+  color: #757575;
+}
+.foot .foot-content .foot-links ul li span {
+  font-size: 16px;
 }
 .foot .foot-content .foot-WeChat {
-  width: 26%;
+  width: 265px;
 }
