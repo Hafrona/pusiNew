@@ -28,28 +28,41 @@ ul,
 li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     outline: none;
     color: #fff;
 }
+input{  
+    background:none;  
+    outline:none;  
+    border:none;
+}
 body {
     font-size: 62.5%;
+    --themeBackgroundColor: #363636;
     background-color: #252525;
     color: #fff;
+}
+
+.banxin {
+    width: 1400px;
+    margin: 0 auto;
+    height: 100%;
 }
 
 // 头部样式
 .header {
     height: 96px;
     width: 100%;
-    margin:0 auto;
-    border-bottom: 1px solid #363636;
-    .header-content{
-        width: 1400px;
-        height: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #3b3b3b;
+
+    .header-content {
         display: flex;
-        margin:0 auto;
+        margin: 0 auto;
+
         .header-logo {
             // float: left;
             width: 15%;
@@ -57,15 +70,17 @@ body {
             background-color: #fff;
             // margin-right: 5em;
         }
-        
+
         .head-nav {
             width: 70%;
             height: 100%;
-            ul{
+
+            ul {
                 width: 100%;
                 height: 100%;
                 display: flex;
-                li{
+
+                li {
                     height: 100%;
                     flex: 1;
                     display: flex;
@@ -74,115 +89,892 @@ body {
                     font-size: 1.6em;
                 }
             }
-            
+
         }
-        .header-call{
+
+        .header-call {
             width: 15%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding-left: 10px;
-            p{
+
+            p {
                 font-size: 1em;
             }
-            h2{
+
+            h2 {
                 font-weight: normal;
                 font-size: 1.8em;
             }
         }
     }
-    
+
 }
 
 // 内容样式
-.content{
+.content {
     width: 100%;
-    height: 30.7em;
-    background-color: #fff;
-}
 
-// 底部样式
-.foot{
-    width: 100%;
-    height: 360px;
-    margin:0 auto;
-    background-color: #363636;
-    border:1px solid #08090a;
-    .foot-content{
-        margin:0 auto;
-        height: 100%;
-        width: 1400px;
-        display: flex;
-        align-items: center;
-        // 地图部分
-        .foot-map{
-            width: 540px;
-            height: 285px;
-            border-radius: 10px ;
-            background-color: #fdfdfd;
-            padding:5px;
-            box-sizing: border-box;
-            margin-right: 55px;
-            .map{
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
+    // 璞思学院部分开始
+    .content-school,
+    .content-javaEE,
+    .content-ui {
+        border: 1px solid #050505;
+        margin-bottom: 26px;
+        background-color: var(--themeBackgroundColor);
+        height: 364px;
+    }
+
+    .content-school {
+        .school {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .school-text {
+                p {
+                    font-size: 36px;
+
+                    &:nth-child(1) {
+                        font-size: 100px;
+                    }
+
+                    &:nth-child(2) {
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            font-weight: 100;
+
+                            &:nth-child(1) {
+                                padding-left: 10px;
+                            }
+
+                            &:nth-child(2) {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
-        // 联系方式
-        .foot-links{
-            width: 450px;
-            height: 284px;
-            padding-top: 37px;
-            h2{
-                font-size: 24px;
-                margin-bottom: 20px;
+    }
+
+    // 璞思学院部分结束
+
+    //javaEE开始
+    .content-javaEE {
+        .school {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .javaEE-explain {
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+
+                .zero {
+                    font-size: 18px;
+
+                    span {
+                        margin-right: 40px;
+                    }
+                }
+
+                h2 {
+                    font-size: 100px;
+                }
+
+                .advantage {
+                    font-size: 50px;
+                    font-weight: 200;
+                    position: relative;
+
+                    span {
+                        font-weight: 600;
+                        font-size: 76px;
+                    }
+                }
             }
-            ul{
+        }
+    }
+
+    //javaEE结束
+
+    //ui设计开始
+    .content-ui {
+        .school {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .ui-design {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    margin-bottom: 10px;
+
+                    &:nth-child(1) {
+                        font-size: 24px;
+                    }
+
+                    &:nth-child(3) {
+                        font-size: 26px;
+                    }
+
+                    &:nth-child(4) {
+                        font-size: 20px;
+                    }
+
+                    &:nth-child(5) {
+                        font-size: 16px;
+                    }
+                }
+
+                h2 {
+                    font-size: 76px;
+                }
+            }
+        }
+    }
+
+    // ui设计结束
+
+    // 课程介绍开始
+    .content-curriculum {
+        border: 1px solid #050505;
+        background-color: var(--themeBackgroundColor);
+        height: 550px;
+
+        .curriculum {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .curriculum-introduce {
+                width: 95%;
+                height: 65%;
+                background-color: #424242;
+                margin: 0 auto;
+                display: flex;
+                border-radius: 15px;
+                position: relative;
+
+                &::after {
+                    content: " ";
+                    width: 98%;
+                    height: 2px;
+                    background-color: #28a9dc;
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                }
+
+                .curriculum-java {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+
+                    .java-title {
+                        height: 40%;
+                        width: 80%;
+                        border-bottom: 1px solid #525252;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        padding-bottom: 20px;
+
+                        h2 {
+                            font-size: 28px;
+                            font-weight: normal;
+                        }
+
+                        p {
+                            font-size: 26px;
+                        }
+                    }
+
+                    .java-content {
+                        border-top: 1px solid #252525;
+                        height: 60%;
+                        width: 80%;
+                        padding-top: 20px;
+                        z-index: 100;
+
+                        span {
+                            font-size: 18px;
+                            color: #ececec;
+                        }
+                    }
+                }
+
+                // 课程介绍-java
+                .curriculum-java {
+                    position: relative;
+
+                    &::after {
+                        content: " ";
+                        width: 1px;
+                        height: 80%;
+                        background-color: #252525;
+                        position: absolute;
+                        right: 0;
+                        top: 40px;
+                    }
+
+                    >p {
+                        font-size: 120px;
+                        position: absolute;
+                        bottom: -25px;
+                        right: -3px;
+                        color: #515050;
+                        opacity: .9;
+                    }
+                }
+
+                // 课程介绍-ui
+                .curriculum-UI {
+                    &::before {
+                        content: " ";
+                        width: 1px;
+                        height: 80%;
+                        background-color: #505050;
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                    }
+                }
+
+                // 课程介绍-web
+                .curriculum-WEB {
+                    &::before {
+                        content: " ";
+                        width: 1px;
+                        height: 80%;
+                        background-color: #505050;
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            .curriculum-nav {
                 width: 100%;
-                height: 172px;
-                padding-left: 20px;
-                li{
-                    list-style-type: disc;
-                    height: 35px;
-                    font-size: 14px;
-                    color: #757575;
-                    span{
+                height: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                ul {
+                    height: 100%;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        height: 30px;
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 60%;
+                            height: 100%;
+                            font-size: 16px;
+                            border: 1px solid #cecece;
+                            border-radius: 25px;
+                            background-color: #484848;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    // 课程介绍结束
+
+    // 鸡汤部分开始
+    .content-chicken-soup {
+        width: 100%;
+        height: 622px;
+        border-bottom: 4px solid #1b1b1b;
+
+        .chicken-soup {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .circle-outside {
+                width: 100%;
+                height: 1400px;
+                border-radius: 50%;
+                background-color: #272727;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .circle2 {
+                    width: 75%;
+                    height: 75%;
+                    border-radius: 50%;
+                    background-color: #2c2c2c;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .chicken-soup-text {
+                        width: 75%;
+                        height: 75%;
+                        border-radius: 50%;
+                        background-color: #363636;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        h2 {
+                            font-size: 34px;
+                        }
+
+                        h3 {
+                            font-size: 28px;
+                            font-weight: normal;
+                        }
+
+                        ul {
+                            height: 245px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 20px;
+                            position: relative;
+
+                            &::after {
+                                content: " ";
+                                width: 45px;
+                                height: 2px;
+                                background-image: linear-gradient(to right, #315faf, #1ca0d7);
+                                position: absolute;
+                                left: 50%;
+                                top: 0px;
+                                transform: translateX(-50%);
+                            }
+
+                            li {
+                                font-size: 16px;
+                                color: #7b7b7b;
+
+                                &:nth-child(3) {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+
+                        >p {
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 鸡汤部分结束
+
+    //标题
+    .title-text,
+    .theSchool-titile-top {
+        width: 380px;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: " ";
+            width: 100px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            ;
+            left: 0;
+            top: 50%;
+        }
+
+        &::before {
+            content: " ";
+            width: 100px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            ;
+            right: 0;
+            top: 50%;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 12px;
+            color: #279aca;
+            text-align: center;
+        }
+    }
+
+
+    //学校新闻部分开始
+    .content-news {
+        height: 645px;
+
+        .school-news {
+
+            //校园新闻标题
+            .school-news-title {
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            //校园新闻内容
+            .school-news-content {
+                height: 70%;
+                display: flex;
+
+                // 校园新闻左边文章列表
+                .school-news-left {
+                    width: 60%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .new-data {
+                        height: 33.3%;
+                        width: 90%;
+                        display: flex;
+
+                        .box {
+                            width: 13%;
+                            height: 80%;
+                            background-color: #fff;
+                            margin-right: 40px;
+                        }
+
+                        .news-data-text {
+                            height: 100%;
+                            border-top: 1px solid #454545;
+                            width: 85%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .news-text-left {
+                                height: 80%;
+                                width: 80%;
+                                font-size: 16px;
+
+                                h2 {
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                }
+
+                                >p {
+                                    color: #757575;
+                                }
+                            }
+
+                            .new-time {
+                                width: 20%;
+                                height: 80%;
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+                }
+
+                // 校园新闻右边图片
+                .school-news-photo {
+                    width: 40%;
+                    height: 80%;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    // 学校新闻部分结束
+
+
+    // 学校风采部分开始
+    .content-theSchool {
+        height: 607px;
+        background-color: var(--themeBackgroundColor);
+
+        .theSchool {
+            height: 100%;
+            position: relative;
+
+            &::after {
+                content: " ";
+                width: 100%;
+                height: 5px;
+                // background-color: #fff;
+                background: linear-gradient(to right,
+                        rgba(50, 86, 150, 0) 0%,
+                        rgba(50, 86, 150, 0.2) 10%,
+                        rgba(50, 86, 150, 0.6) 20%,
+                        rgba(50, 86, 150, 0.8) 30%,
+                        rgba(50, 86, 150, 0.9) 40%,
+                        rgba(38, 144, 189, 0.9) 50%,
+                        rgba(38, 144, 189, 0.8) 60%,
+                        rgba(38, 144, 189, 0.6) 70%,
+                        rgba(38, 144, 189, 0.3) 80%,
+                        rgba(38, 144, 189, 0.2) 90%,
+                        rgba(38, 144, 189, 0) 100%);
+                position: absolute;
+                top: 0px;
+            }
+
+            .theSchool-title {
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .theSchool-title-text {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .theSchool-titile-top {
+                        margin-bottom: 20px;
+                    }
+
+                    .theSchool-title-bottom {
+                        width: 85%;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .theSchool-content {
+                height: 70%;
+                display: flex;
+
+                .theSchool-content-photo {
+                    width: 33.3%;
+                    // background-color: #fff;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .box2 {
+                        width: 324px;
+                        height: 324px;
+                        background-color: #fff;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
                         font-size: 16px;
                     }
                 }
             }
         }
+    }
+
+    // 学校风采部分结束
+
+    // 璞思大家庭开始
+    .content-pusi-familiar {
+        height: 662px;
+
+        .pusi-familiar {
+            height: 100%;
+
+            .pusi-familiar-title {
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .pusi-family-swiper {
+                height: 70%;
+                display: flex;
+            }
+        }
+    }
+
+    //璞思大家庭结束
+
+    //报名流程开始
+    .content-registration-process {
+        height: 600px;
+        background-color: var(--themeBackgroundColor);
+        border: 1px solid #000000;
+
+        .registration-process {
+            height: 100%;
+
+            .registration-process-title {
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .registration-process-form {
+                height: 80%;
+                display: flex;
+
+                .form-left {
+                    width: 30%;
+
+                    .form-left-start {
+                        height: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        position: relative;
+                        margin-bottom: 40px;
+                        p {
+                            font-size: 14px;
+                        }
+
+                        h2 {
+                            font-size: 46px;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 65px;
+                            height: 3px;
+
+                            background:
+                                linear-gradient(135deg, transparent, transparent 45%, #fff, transparent 55%, transparent 100%),
+                                linear-gradient(45deg, transparent, transparent 45%, #fff, transparent 55%, transparent 100%);
+                            background-size: 0.5em 0.5em;
+                            background-repeat: repeat-x, repeat-x;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                        font-weight: normal;
+                    }
+                }
+
+                .point-to {
+                    width: 30%;
+                }
+
+                .form-right {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    form{
+                        width: 65%;
+                        height: 85%;
+                        display: flex;
+                        flex-direction: column;
+                        padding:0 26px;
+                        background-color: #4a4a4a;
+                        box-shadow: 0px 18px 8px rgba(37, 37, 37, .5);
+                        .form-title{
+                            height: 15%;
+                            font-size: 20px;
+                            display: flex;
+                            align-items: center;
+                        }
+                        .confirm{
+                            height: 25%;
+                            border-top: 1px solid #c2c2c2;
+                            padding:10px;
+                            font-size: 14px;
+                            color: #919191;
+                            span{
+                                display: block;
+                                margin-bottom: 10px;
+                            }
+                            button{
+                                width: 100px;
+                                height: 30px;
+                                background: linear-gradient(to right,#325bad,#1ca1d8);
+                                outline: none;
+                                color: #fff;
+                                border:none;
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .get-user-name,.get-user-phone,.get-subject,.get-qq-num{
+        height: 15%;
+        background-color:rgba(0,0,0,0);
+        color: #fff;
+        font-size: 14px;
+        border-top:1px solid #c2c2c2;
+        display: flex;
+        align-items: flex-end;
+        input{
+            height: 60%;
+            width: 100%;
+            color: #fff;
+            &::-webkit-input-placeholder {
+                color: #ecebeb;
+              }
+        }
+    }
+    // 报名流程结束
+
+    // 关于我们开始
+    .content-abount-us{
+        height: 761px;
+        .abount-us{
+            .abount-us-title{
+                
+            }
+            .about-us-swiper{
+                
+            }
+        }
+    }
+    // 关于我们结束
+}
+
+// 底部样式
+.foot {
+    width: 100%;
+    height: 360px;
+    background-color: var(--themeBackgroundColor);
+    border: 1px solid #08090a;
+
+    .foot-content {
+        display: flex;
+        align-items: center;
+
+        // 地图部分
+        .foot-map {
+            width: 540px;
+            height: 285px;
+            border-radius: 10px;
+            background-color: #fdfdfd;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-right: 55px;
+
+            .map {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        // 联系方式
+        .foot-links {
+            width: 450px;
+            height: 284px;
+            padding-top: 37px;
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                width: 100%;
+                height: 172px;
+                padding-left: 20px;
+
+                li {
+                    list-style-type: disc;
+                    height: 35px;
+                    font-size: 14px;
+                    color: #757575;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
         // 二维码
-        .foot-WeChat{
+        .foot-WeChat {
             width: 266px;
             height: 100%;
             display: flex;
             align-items: flex-end;
             font-size: 20px;
             padding-bottom: 70px;
-            .code-left{
+
+            .code-left {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
                 margin-right: 20px;
-                p{
+
+                p {
                     margin-bottom: 15px;
                 }
-                .img1{
+
+                .img1 {
                     width: 100px;
                     height: 100px;
                     background-color: #fff;
                 }
             }
-            .code-right{
+
+            .code-right {
                 flex: 1;
-                p{
+
+                p {
                     margin-bottom: 15px;
                 }
-                .img2{
+
+                .img2 {
                     width: 100px;
                     height: 100px;
                     background-color: #fff;
@@ -190,11 +982,10 @@ body {
             }
         }
     }
-    .copyright{
+
+    .copyright {
         color: #757575;
         height: 125px;
-        width: 1400px;
-        margin:0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
