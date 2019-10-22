@@ -581,6 +581,7 @@ body {
 .content .content-registration-process .registration-process .registration-process-form {
   height: 80%;
   display: flex;
+  justify-content: center;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-left {
   width: 30%;
@@ -618,13 +619,13 @@ body {
   width: 30%;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right {
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: center;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form {
-  width: 65%;
-  height: 85%;
+  width: 100%;
+  height: 86%;
   display: flex;
   flex-direction: column;
   padding: 0 26px;
@@ -685,6 +686,16 @@ body {
 }
 .content .content-abount-us {
   height: 761px;
+}
+.content .content-abount-us .abount-us .abount-us-title {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-abount-us .abount-us .about-us-swiper {
+  height: 80%;
 }
 .foot {
   width: 100%;
