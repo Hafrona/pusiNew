@@ -52,7 +52,9 @@ body {
 .header .header-content .header-logo {
   width: 15%;
   height: 100%;
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header .header-content .head-nav {
   width: 70%;
@@ -617,6 +619,10 @@ body {
 }
 .content .content-registration-process .registration-process .registration-process-form .point-to {
   width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right {
   width: 30%;
@@ -762,21 +768,31 @@ body {
 .foot .foot-content .foot-WeChat .code-left p {
   margin-bottom: 15px;
 }
-.foot .foot-content .foot-WeChat .code-left .img1 {
+.foot .foot-content .foot-WeChat .code-left img {
   width: 100px;
   height: 100px;
-  background-color: #fff;
 }
 .foot .foot-content .foot-WeChat .code-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .foot .foot-content .foot-WeChat .code-right p {
   margin-bottom: 15px;
 }
-.foot .foot-content .foot-WeChat .code-right .img2 {
+.foot .foot-content .foot-WeChat .code-right img {
   width: 100px;
   height: 100px;
-  background-color: #fff;
+}
+.foot .foot-content .go-top {
+  width: 50px;
+  height: 50px;
+  background-color: #252525;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
 }
 .foot .copyright {
   color: #757575;
