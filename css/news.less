@@ -1,0 +1,278 @@
+.head{
+    height: 93px;
+}
+// 内容样式
+.content {
+    // width: 100%;
+
+    // 璞思学院部分开始
+    .content-school,
+    .content-javaEE,
+    .content-ui {
+        border: 1px solid #050505;
+        margin-bottom: 26px;
+        background-color: var(--themeBackgroundColor);
+        height: 364px;
+    }
+
+    .content-school {
+        .school {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .school-text {
+                p {
+                    font-size: 36px;
+
+                    &:nth-child(1) {
+                        font-size: 100px;
+                    }
+
+                    &:nth-child(2) {
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            font-weight: 100;
+
+                            &:nth-child(1) {
+                                padding-left: 10px;
+                            }
+
+                            &:nth-child(2) {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 璞思学院部分结束
+
+    //javaEE开始
+    .content-javaEE {
+        .school {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .javaEE-explain {
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+
+                .zero {
+                    font-size: 18px;
+
+                    span {
+                        margin-right: 40px;
+                    }
+                }
+
+                h2 {
+                    font-size: 100px;
+                }
+
+                .advantage {
+                    font-size: 50px;
+                    font-weight: 200;
+                    position: relative;
+
+                    span {
+                        font-weight: 600;
+                        font-size: 76px;
+                    }
+                }
+            }
+        }
+    }
+
+    //javaEE结束
+
+    //ui设计开始
+    .content-ui {
+        .school {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .ui-design {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    margin-bottom: 10px;
+
+                    &:nth-child(1) {
+                        font-size: 24px;
+                    }
+
+                    &:nth-child(3) {
+                        font-size: 26px;
+                    }
+
+                    &:nth-child(4) {
+                        font-size: 20px;
+                    }
+
+                    &:nth-child(5) {
+                        font-size: 16px;
+                    }
+                }
+
+                h2 {
+                    font-size: 76px;
+                }
+            }
+        }
+    }
+
+    // ui设计结束
+
+    //新闻动态开始
+    .dynamic-news {
+        margin-bottom: 70px;
+
+        .news {
+            // width: 1650px;
+            margin: 0 auto;
+
+            .news-title {
+                height: 200px;
+                width: 100%;
+                border-bottom: 1px solid #535353;
+                position: relative;
+                .news-title-content {
+                    width: 85%;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+
+                    .news-title-left {
+                        flex: 1;
+                        height: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        padding: 0 0 10px 10px;
+                        position: relative;
+
+                        &::after {
+                            content: " ";
+                            width: 1px;
+                            height: 55%;
+                            background: linear-gradient(to bottom, #1d9edf, #325cae);
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                        }
+
+                        h2 {
+                            font-size: 36px;
+                            font-weight: normal;
+                        }
+
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .news-title-nav {
+                        flex: 1;
+                        height: 80%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        padding-bottom: 30px;
+
+                        .title-nav {
+                            height: 23%;
+                            display: flex;
+                            align-items: center;
+                            font-size: 17px;
+                            padding: 0 35px;
+                            background-color: #3a3a3a;
+                            border: 1px solid #fff;
+                            margin-right: 15px;
+                            // background: linear-gradient(to bottom,#1d9edf,#325cae);
+                            border-radius: 20px;
+                        }
+                    }
+                }
+
+            }
+
+            .news-list {
+                width: 100%;
+                border-bottom: 1px solid #535353;
+                position: relative;
+                .news-list-content {
+                    width: 85%;
+                    display: flex;
+                    margin: 0 auto;
+
+                    .list-time {
+                        width: 25%;
+                        display: flex;
+                        padding-top: 50px;
+                        .list-time-icon {
+                            display: inline-block;
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fff;
+                            margin-top: 30px;
+                        }
+
+                        .list-time-date {
+                            margin-left: 10px;
+
+                            h2 {
+                                font-size: 60px;
+                                display: flex;
+                                flex-direction: column;
+                                position: relative;
+                                span {
+                                    font-size: 25px;
+                                    position: absolute;
+                                    bottom: -15px;
+                                    left: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                    .list-right {
+                        width: 75%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 50px 0;
+
+                        h2 {
+                            font-size: 30px;
+                            margin-bottom: 15px;
+                            font-weight: normal;
+                        }
+
+                        .list-right-text {
+                            font-size: 20px;
+                            color: #f5f5f5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

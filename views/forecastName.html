@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/forecastName.css">
+</head>
+<script src="../js/jquery.js"></script>
+<script>
+    $(function () {
+        $(".head").load("/views/header.html");
+        $(".footer").load("/views/footer.html");
+    })
+</script>
+<body>
+    <!-- 头部logo，导航，联系电话 -->
+    <div class="head"></div>
+    <!-- 璞思学院介绍 -->
+    <div class="content">
+        <div class="content-school">
+            <div class="school banxin">
+                <div class="school-text">
+                    <p>璞思学院</p>
+                    <p><span>传道受业</span><span>德行天下</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- javaEE课程优势 -->
+        <div class="content-javaEE">
+            <div class="school banxin">
+                <div class="javaEE-explain">
+                    <p class="zero"><span>没有基础</span>没有经验如何在职场上脱颖而出</p>
+                    <h2>JavaEE</h2>
+                    <p class="advantage"><span>4</span>大课程优势</p>
+                    <p>让你成为中高端人才</p>
+                    <p>MAKE YOU A MID-TO-HIGH-END TALENT</p>
+                </div>
+            </div>
+        </div>
+        <!-- ul设计介绍 -->
+        <div class="content-ui">
+            <div class="school banxin">
+                <div class="ui-design">
+                    <p>全链路UI3.0,分阶段学习，因材施教</p>
+                    <h2>5步缔造顶尖UI设计师</h2>
+                    <p>突破职场瓶颈，升职加薪不是梦</p>
+                    <p>先培训后就业 进入名企拿高薪</p>
+                    <p>多元化服务 一对一辅导 小班授课 总监级到时倾心相授</p>
+                </div>
+            </div>
+        </div>
+        <!-- 填写预报名 -->
+        <div class="forecast-name">
+            <div class="forecast-name-content banxin">
+                <div class="forecast-title">
+                    <h2>填写预报名</h2>
+                    <p>FILL IN THE FORECAST NAME</p>
+                    <span>您如果想报名参加培训，需要在下方填写个人预报名信息，提交信息后，我们的咨询老师会主动联系您!</span>
+                </div>
+                <form class="forecast-user-message">
+                    <div class="message-input">
+                        <span></span>
+                        <input name="userName" type="text" placeholder="真实姓名">
+                    </div>
+                    <div class="message-input">
+                        <span></span>
+                        <input name='subject' type="text" placeholder="所报学科">
+                    </div>
+                    <div class="message-input">
+                        <span></span>
+                        <input name="userPhone" type="text" placeholder="手机号码">
+                    </div>
+                    <div class="message-input">
+                        <span></span>
+                        <input name="userQQ" type="text" placeholder="QQ号码">
+                    </div>
+                </form>
+                <div class="forecast-btn">
+                    <h2>开班座位有限，预报名可以优先享有占座权</h2>
+                    <span>(温馨提示：请保持手机，咨询老师将为您提供专属的一对一报名服务)</span>
+                    <button>立即报名</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部位置，招生热线，二维码 -->
+    <div class="footer"></div>
+</body>
+
+</html>
