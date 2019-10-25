@@ -11,14 +11,32 @@
 </head>
 <script src="../js/jquery.js"></script>
 <script>
-    $(function () {
-        $(".head").load("/views/header.html");
-        $(".footer").load("/views/footer.html");
-    })
 </script>
+
 <body>
     <!-- 头部logo，导航，联系电话 -->
-    <div class="head"></div>
+    <header class="header">
+        <div class="header-content banxin">
+            <h1 class="header-logo">
+                <img src="../images/logo.jpg" alt="">
+            </h1>
+            <div class="head-nav">
+                <ul>
+                    <li><a class="btn" href="#">首页</a></li>
+                    <li><a class="btn" href="#">课程介绍</a></li>
+                    <li><a class="btn" href="#">校园新闻</a></li>
+                    <li><a class="btn" href="#">师资力量</a></li>
+                    <li><a class="btn" href="#">学校风采</a></li>
+                    <li><a class="btn" href="#">报名流程</a></li>
+                    <li><a class="btn" href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="header-call">
+                <p>教育热线</p>
+                <h2>400-1581-881</h2>
+            </div>
+        </div>
+    </header>
     <!-- 璞思学院介绍 -->
     <div class="content">
         <div class="content-school">
@@ -36,21 +54,34 @@
                     <p class="zero"><span>没有基础</span>没有经验如何在职场上脱颖而出</p>
                     <h2>JavaEE</h2>
                     <p class="advantage"><span>4</span>大课程优势</p>
-                    <p>让你成为中高端人才</p>
-                    <p>MAKE YOU A MID-TO-HIGH-END TALENT</p>
+                    <h3>让你成为中高端人才</h3>
+                    <p>MAKE&nbsp;YOU&nbsp;A&nbsp;MID-TO-HIGH-END&nbsp;TALENT</p>
                 </div>
             </div>
         </div>
         <!-- ul设计介绍 -->
         <div class="content-ui">
             <div class="school banxin">
-                <div class="ui-design">
-                    <p>全链路UI3.0,分阶段学习，因材施教</p>
-                    <h2>5步缔造顶尖UI设计师</h2>
-                    <p>突破职场瓶颈，升职加薪不是梦</p>
-                    <p>先培训后就业 进入名企拿高薪</p>
-                    <p>多元化服务 一对一辅导 小班授课 总监级到时倾心相授</p>
-                </div>
+                <ul class="ui-design">
+                    <li>
+                        <h3>全链路UI3.0,分阶段学习，因材施教</h3>
+                    </li>
+                    <li>
+                        <h2>5步缔造顶尖UI设计师</h2>
+                    </li>
+                    <li>
+                        <h4>突破职场瓶颈，升职加薪不是梦</h4>
+                    </li>
+                    <li><span>先培训后就业 进入名企拿高薪</span></li>
+                    <li>
+                        <ul>
+                            <li>多元化服务</li>
+                            <li>一对一辅导</li>
+                            <li>小班授课</li>
+                            <li>总监级到时倾心相授</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- 填写预报名 -->
@@ -89,7 +120,42 @@
     </div>
 
     <!-- 底部位置，招生热线，二维码 -->
-    <div class="footer"></div>
+    <footer class="foot">
+        <div class="foot-content banxin">
+            <div class="foot-map">
+                <div class="map">
+
+                </div>
+            </div>
+            <div class="foot-links">
+                <h2>全国免费招生热线：400-1581-881</h2>
+                <ul>
+                    <li><span>客服手机：</span>18020608313</li>
+                    <li><span>网址：</span> www.pusiuni.com</li>
+                    <li><span>QQ：</span>737358703</li>
+                    <li><span>邮箱：</span>pusi@miaohaigou.com</li>
+                    <li><span>地址：</span>莆田市城厢区华林经济开发区腾飞路66号骠骑大厦4层</li>
+                </ul>
+            </div>
+            <div class="foot-WeChat">
+                <div class="code-left">
+                    <p>关注公众账号</p>
+                    <img src="../images/code1.jpg" alt="">
+                </div>
+                <div class="code-right">
+                    <p>了解更多资讯</p>
+                    <img src="../images/code2.jpg" alt="">
+                </div>
+            </div>
+            <div class="go-top">
+
+            </div>
+        </div>
+        <!-- 网站版权信息 -->
+        <div class="copyright">
+            <p>©&nbsp;2019&nbsp;HUGO.&nbsp;All&nbsp;rights&nbsp;resevered.&nbsp;Designed&nbsp;by&nbsp;DZOAN</p>
+        </div>
+    </footer>
 </body>
 
 </html>

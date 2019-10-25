@@ -25,14 +25,27 @@
                 width: 100%;
                 height: 100%;
                 display: flex;
+                justify-content: flex-end;
 
                 li {
                     height: 100%;
-                    flex: 1;
                     display: flex;
+                    width: 13%;
                     justify-content: center;
                     align-items: center;
                     font-size: 1.6em;
+
+                    a {
+                        width: 80%;
+                        text-align: center;
+                        padding: 5px 0;
+                        border-radius: 20px;
+
+                        &:hover {
+                            border: 2px solid #404040;
+                            border-radius: 20px;
+                        }
+                    }
                 }
             }
 
@@ -134,18 +147,37 @@
                 }
 
                 h2 {
-                    font-size: 100px;
+                    font-size: 126px;
+                    line-height: 100%;
                 }
 
                 .advantage {
-                    font-size: 50px;
-                    font-weight: 200;
+                    font-size: 72px;
+                    font-weight: normal;
                     position: relative;
+
+                    &::after {
+                        content: "大课程优势";
+                        font-size: 72px;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                        color: #363636;
+                        filter: blur(6px);
+                        opacity: .6;
+                    }
 
                     span {
                         font-weight: 600;
-                        font-size: 76px;
+                        font-size: 106px;
+                        line-height: 100%;
                     }
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: normal;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -169,28 +201,62 @@
                 justify-content: center;
                 align-items: center;
 
-                p {
-                    margin-bottom: 10px;
+                >li {
+                    &:nth-last-child(2) {
+                        margin: 20px 0;
+                    }
 
-                    &:nth-child(1) {
+                    h3 {
+                        font-weight: normal;
                         font-size: 24px;
                     }
 
-                    &:nth-child(3) {
+                    h2 {
+                        font-weight: normal;
+                        font-size: 84px;
+                    }
+
+                    h4 {
+                        font-weight: normal;
                         font-size: 26px;
                     }
 
-                    &:nth-child(4) {
+                    span {
                         font-size: 20px;
+                        position: relative;
+
+                        &::after {
+                            content: " ";
+                            width: 100px;
+                            height: 1px;
+                            background-color: #fff;
+                            position: absolute;
+                            right: -50%;
+                            top: 50%;
+                        }
+
+                        &::before {
+                            content: " ";
+                            width: 100px;
+                            height: 1px;
+                            background-color: #fff;
+                            position: absolute;
+                            left: -50%;
+                            top: 50%;
+                        }
                     }
 
-                    &:nth-child(5) {
-                        font-size: 16px;
+                    ul {
+                        li {
+                            padding: 5px 18px;
+                            font-size: 16px;
+                            float: left;
+                            border: 1px solid #fff;
+                            border-radius: 15px;
+                            margin: 0px 20px;
+                            background-color: #484848;
+                        }
                     }
-                }
-
-                h2 {
-                    font-size: 76px;
                 }
             }
         }
@@ -245,12 +311,12 @@
                         padding-bottom: 20px;
 
                         h2 {
-                            font-size: 28px;
+                            font-size: 38px;
                             font-weight: normal;
                         }
 
                         p {
-                            font-size: 26px;
+                            font-size: 28px;
                         }
                     }
 
@@ -571,7 +637,21 @@
                 .school-news-photo {
                     width: 40%;
                     height: 80%;
-                    background-color: #fff;
+
+                    .news-photo {
+                        height: 80%;
+                        background-color: antiquewhite;
+                    }
+
+                    p {
+                        height: 20%;
+                        font-size: 20px;
+                        color: #333;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 30px;
+                    }
                 }
             }
         }
@@ -696,7 +776,7 @@
 
         .registration-process {
             height: 100%;
-            
+
             .registration-process-title {
                 height: 20%;
                 display: flex;
@@ -708,6 +788,7 @@
                 height: 80%;
                 display: flex;
                 justify-content: center;
+
                 .form-left {
                     width: 30%;
 
@@ -718,6 +799,7 @@
                         justify-content: center;
                         position: relative;
                         margin-bottom: 40px;
+
                         p {
                             font-size: 14px;
                         }
@@ -754,46 +836,48 @@
                     justify-content: center;
                     align-items: flex-end;
                     padding-bottom: 30px;
-                    img{
-
-                    }
                 }
 
                 .form-right {
                     width: 30%;
                     display: flex;
                     justify-content: center;
-                    form{
+
+                    form {
                         width: 100%;
                         height: 86%;
                         display: flex;
                         flex-direction: column;
-                        padding:0 26px;
+                        padding: 0 26px;
                         background-color: #4a4a4a;
                         box-shadow: 0px 18px 8px rgba(37, 37, 37, .5);
-                        .form-title{
+
+                        .form-title {
                             height: 15%;
                             font-size: 20px;
                             display: flex;
                             align-items: center;
                         }
-                        .confirm{
+
+                        .confirm {
                             height: 25%;
                             border-top: 1px solid #c2c2c2;
-                            padding:10px;
+                            padding: 10px;
                             font-size: 14px;
                             color: #919191;
-                            span{
+
+                            span {
                                 display: block;
                                 margin-bottom: 10px;
                             }
-                            button{
+
+                            button {
                                 width: 100px;
                                 height: 30px;
-                                background: linear-gradient(to right,#325bad,#1ca1d8);
+                                background: linear-gradient(to right, #325bad, #1ca1d8);
                                 outline: none;
                                 color: #fff;
-                                border:none;
+                                border: none;
                                 border-radius: 15px;
                             }
                         }
@@ -802,47 +886,128 @@
             }
         }
     }
-    .get-user-name,.get-user-phone,.get-subject,.get-qq-num{
+
+    .get-user-name,
+    .get-user-phone,
+    .get-subject,
+    .get-qq-num {
         height: 15%;
-        background-color:rgba(0,0,0,0);
+        background-color: rgba(0, 0, 0, 0);
         color: #fff;
         font-size: 14px;
-        border-top:1px solid #c2c2c2;
+        border-top: 1px solid #c2c2c2;
         display: flex;
         align-items: flex-end;
-        input{
+
+        input {
             height: 60%;
             width: 100%;
             color: #fff;
+
             &::-webkit-input-placeholder {
                 color: #ecebeb;
-              }
+            }
         }
     }
+
     // 报名流程结束
 
     // 关于我们开始
-    .content-abount-us{
+    .content-abount-us {
         height: 761px;
-        .abount-us{
-            .abount-us-title{
+
+        .abount-us {
+            .abount-us-title {
                 height: 20%;
-                width:100%;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            .about-us-swiper{
-                height: 80%;
+
+            #certify {
+                height: 75%;
+                position: relative;
+                margin: 0 auto;
+
+                .swiper-container {
+                    height: 90%;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            width: 55%;
+                            height: 100%;
+                            background: #fff;
+                            border-radius: 15px;
+
+                            img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .swiper-pagination {
+                    width: 100%;
+                    bottom: 20px;
+                    display: none;
+                }
+
+                .swiper-pagination-bullets .swiper-pagination-bullet {
+                    margin: 0 5px;
+                    border: 3px solid #fff;
+                    background-color: #d5d5d5;
+                    width: 10px;
+                    height: 10px;
+                    opacity: 1;
+                }
+
+                .swiper-pagination-bullets .swiper-pagination-bullet-active {
+                    border: 3px solid #00aadc;
+                    background-color: #fff;
+                }
+
+                .swiper-button-prev {
+                    left: -30px;
+                    width: 45px;
+                    height: 45px;
+                    background: url(../images/wm_button_icon.png) no-repeat;
+                    background-position: 0 0;
+                    background-size: 100%;
+                    display: none;
+                }
+
+                .swiper-button-prev:hover {
+                    background-position: 0 -46px;
+                    background-size: 100%
+                }
+
+                .swiper-button-next {
+                    right: -30px;
+                    width: 45px;
+                    height: 45px;
+                    background: url(../images/wm_button_icon.png) no-repeat;
+                    background-position: 0 -93px;
+                    background-size: 100%;
+                    display: none;
+                }
+
+                .swiper-button-next:hover {
+                    background-position: 0 -139px;
+                    background-size: 100%
+                }
             }
         }
     }
+
     // 关于我们结束
 }
 
 // 底部样式
 .foot {
-    width: 100%;
     height: 360px;
     background-color: var(--themeBackgroundColor);
     border: 1px solid #08090a;
@@ -916,7 +1081,8 @@
                 p {
                     margin-bottom: 15px;
                 }
-                img{
+
+                img {
                     width: 100px;
                     height: 100px;
                 }
@@ -927,16 +1093,19 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+
                 p {
                     margin-bottom: 15px;
                 }
-                img{
+
+                img {
                     width: 100px;
                     height: 100px;
                 }
             }
         }
-        .go-top{
+
+        .go-top {
             width: 50px;
             height: 50px;
             background-color: #252525;

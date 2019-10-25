@@ -8,17 +8,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
 </head>
-<script src="../js/jquery.js"></script>
-<script>
-    $(function () {
-        $(".head").load("/views/header.html");
-        $(".footer").load("/views/footer.html");
-    })
-</script>
+
 <body>
     <!-- 头部logo，导航，联系电话 -->
-    <div class="head"></div>
+    <header class="header">
+        <div class="header-content banxin">
+            <h1 class="header-logo">
+                <img src="../images/logo.jpg" alt="">
+            </h1>
+            <div class="head-nav">
+                <ul>
+                    <li><a class="btn" href="#">首页</a></li>
+                    <li><a class="btn" href="#">课程介绍</a></li>
+                    <li><a class="btn" href="#">校园新闻</a></li>
+                    <li><a class="btn" href="#">师资力量</a></li>
+                    <li><a class="btn" href="#">学校风采</a></li>
+                    <li><a class="btn" href="#">报名流程</a></li>
+                    <li><a class="btn" href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="header-call">
+                <p>教育热线</p>
+                <h2>400-1581-881</h2>
+            </div>
+        </div>
+    </header>
     <!-- 璞思学院介绍 -->
     <div class="content">
         <div class="content-school">
@@ -36,21 +52,34 @@
                     <p class="zero"><span>没有基础</span>没有经验如何在职场上脱颖而出</p>
                     <h2>JavaEE</h2>
                     <p class="advantage"><span>4</span>大课程优势</p>
-                    <p>让你成为中高端人才</p>
-                    <p>MAKE YOU A MID-TO-HIGH-END TALENT</p>
+                    <h3>让你成为中高端人才</h3>
+                    <p>MAKE&nbsp;YOU&nbsp;A&nbsp;MID-TO-HIGH-END&nbsp;TALENT</p>
                 </div>
             </div>
         </div>
         <!-- ul设计介绍 -->
         <div class="content-ui">
             <div class="school banxin">
-                <div class="ui-design">
-                    <p>全链路UI3.0,分阶段学习，因材施教</p>
-                    <h2>5步缔造顶尖UI设计师</h2>
-                    <p>突破职场瓶颈，升职加薪不是梦</p>
-                    <p>先培训后就业 进入名企拿高薪</p>
-                    <p>多元化服务 一对一辅导 小班授课 总监级到时倾心相授</p>
-                </div>
+                <ul class="ui-design">
+                    <li>
+                        <h3>全链路UI3.0,分阶段学习，因材施教</h3>
+                    </li>
+                    <li>
+                        <h2>5步缔造顶尖UI设计师</h2>
+                    </li>
+                    <li>
+                        <h4>突破职场瓶颈，&nbsp;&nbsp;升职加薪不是梦</h4>
+                    </li>
+                    <li><span>先培训后就业&nbsp;&nbsp;&nbsp;&nbsp;进入名企拿高薪</span></li>
+                    <li>
+                        <ul>
+                            <li>多元化服务</li>
+                            <li>一对一辅导</li>
+                            <li>小班授课</li>
+                            <li>总监级到时倾心相授</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- 课程 -->
@@ -110,7 +139,7 @@
                 <div class="circle-outside">
                     <div class="circle2">
                         <div class="chicken-soup-text">
-                            <h2>观念影响选择 选择影响行动</h2>
+                            <h2>观念影响选择&nbsp;选择影响行动</h2>
                             <h3>而行动最终会改变命运</h3>
                             <ul>
                                 <li><span>命运是可以改变的</span></li>
@@ -180,7 +209,10 @@
                     </div>
                     <!-- 右边图片部分 -->
                     <div class="school-news-photo">
+                        <div class="news-photo">
 
+                        </div>
+                        <p>我们为什么选择JAVA?</p>
                     </div>
                 </div>
             </div>
@@ -188,6 +220,7 @@
         <!-- 学校风采 -->
         <div class="content-theSchool">
             <div class="theSchool banxin">
+                <!-- 标题 -->
                 <div class="theSchool-title">
                     <div class="theSchool-title-text">
                         <div class="theSchool-titile-top">
@@ -199,7 +232,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- 内容 -->
                 <div class="theSchool-content">
+                    <!-- 图片 -->
                     <div class="theSchool-content-photo">
                         <div class="box2"></div>
                         <p>优美的教学坏境</p>
@@ -232,6 +267,7 @@
         <!-- 报名流程 -->
         <div class="content-registration-process">
             <div class="registration-process banxin">
+                <!-- 标题 -->
                 <div class="registration-process-title">
                     <div class="title-text">
                         <h2>报名流程</h2>
@@ -239,6 +275,7 @@
                     </div>
                 </div>
                 <div class="registration-process-form">
+                    <!-- 内容左边文字部分 -->
                     <div class="form-left">
                         <div class="form-left-start">
                             <p>Creative Landing Page Template</p>
@@ -246,9 +283,11 @@
                         </div>
                         <h3>查看更多</h3>
                     </div>
+                    <!-- 中间箭头 -->
                     <div class="point-to">
                         <img src="../images/jiantou.jpg" alt="">
                     </div>
+                    <!-- 右边表单 -->
                     <div class="form-right">
                         <form action="">
                             <div class="form-title">报名</div>
@@ -266,7 +305,7 @@
                             </div>
                             <div class="confirm">
                                 <span>准确真实的填写你的个人信息&nbsp;即可获得免费试听课程,招生老师会及时与你取得联系</span>
-                                <button>确认报名</button>
+                                <button class="confirm-apply" disabled>确认报名</button>
                             </div>
                         </form>
                     </div>
@@ -276,23 +315,124 @@
         <!-- 关于我们 -->
         <div class="content-abount-us">
             <div class="abount-us banxin">
+                <!-- 标题 -->
                 <div class="abount-us-title">
                     <div class="title-text">
                         <h2>关于我们</h2>
                         <p>ABOUNT&nbsp;US</p>
                     </div>
                 </div>
-                <div class="about-us-swiper">
-                    <div class="my-swiper">
-
+                <!-- 轮播图 -->
+                <div id="certify">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/images/certify01.png" />
+                            </div>
+                            <div class="swiper-slide"><img src="/images/certify02.png" />
+                            </div>
+                            <div class="swiper-slide"><img src="/images/certify03.png" />
+                            </div>
+                            <div class="swiper-slide"><img src="/images/certify04.png" />
+                            </div>
+                            <div class="swiper-slide"><img src="/images/certify05.png" />
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- 底部位置，招生热线，二维码 -->
-    <div class="footer"></div>
+    <footer class="foot">
+        <div class="foot-content banxin">
+            <div class="foot-map">
+                <div class="map">
+
+                </div>
+            </div>
+            <div class="foot-links">
+                <h2>全国免费招生热线：400-1581-881</h2>
+                <ul>
+                    <li><span>客服手机：</span>18020608313</li>
+                    <li><span>网址：</span> www.pusiuni.com</li>
+                    <li><span>QQ：</span>737358703</li>
+                    <li><span>邮箱：</span>pusi@miaohaigou.com</li>
+                    <li><span>地址：</span>莆田市城厢区华林经济开发区腾飞路66号骠骑大厦4层</li>
+                </ul>
+            </div>
+            <div class="foot-WeChat">
+                <div class="code-left">
+                    <p>关注公众账号</p>
+                    <img src="../images/code1.jpg" alt="">
+                </div>
+                <div class="code-right">
+                    <p>了解更多资讯</p>
+                    <img src="../images/code2.jpg" alt="">
+                </div>
+            </div>
+            <div class="go-top">
+
+            </div>
+        </div>
+        <!-- 网站版权信息 -->
+        <div class="copyright">
+            <p>©&nbsp;2019&nbsp;HUGO.&nbsp;All&nbsp;rights&nbsp;resevered.&nbsp;Designed&nbsp;by&nbsp;DZOAN</p>
+        </div>
+    </footer>
 </body>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script>
+    $(function () {
+        certifySwiper = new Swiper('#certify .swiper-container', {
+            watchSlidesProgress: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 5,
+            autoplay: true,
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            on: {
+                progress: function (progress) {
+                    for (i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        var slideProgress = this.slides[i].progress;
+                        modify = 1;
+                        if (Math.abs(slideProgress) > 1) {
+                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                        }
+                        translate = slideProgress * modify * 250 + 'px';
+                        scale = 1 - Math.abs(slideProgress) / 5;
+                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 1);
+                        if (Math.abs(slideProgress) > 3) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+                },
+                setTransition: function (transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i)
+                        slide.transition(transition);
+                    }
+
+                }
+            }
+
+        })
+    })
+
+</script>
 
 </html>
