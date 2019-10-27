@@ -20,12 +20,12 @@
             </h1>
             <div class="head-nav">
                 <ul>
-                    <li><a class="btn" href="#">首页</a></li>
-                    <li><a class="btn" href="#">课程介绍</a></li>
-                    <li><a class="btn" href="#">校园新闻</a></li>
-                    <li><a class="btn" href="#">师资力量</a></li>
-                    <li><a class="btn" href="#">学校风采</a></li>
-                    <li><a class="btn" href="#">报名流程</a></li>
+                    <li><a class="btn" href="./index.html">首页</a></li>
+                    <li><a class="btn" href="./javaOutLine.html">课程介绍</a></li>
+                    <li><a class="btn" href="./news.html">校园新闻</a></li>
+                    <li><a class="btn" href="./abounUs.html">师资力量</a></li>
+                    <li><a class="btn" href="./environment.html">学校风采</a></li>
+                    <li><a class="btn" href="./forecastName.html">报名流程</a></li>
                     <li><a class="btn" href="#">关于我们</a></li>
                 </ul>
             </div>
@@ -323,25 +323,26 @@
                     </div>
                 </div>
                 <!-- 轮播图 -->
-                <div id="certify">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="/images/certify01.png" />
-                            </div>
-                            <div class="swiper-slide"><img src="/images/certify02.png" />
-                            </div>
-                            <div class="swiper-slide"><img src="/images/certify03.png" />
-                            </div>
-                            <div class="swiper-slide"><img src="/images/certify04.png" />
-                            </div>
-                            <div class="swiper-slide"><img src="/images/certify05.png" />
-                            </div>
+                <div class="swiper-container" id="certify">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../images/t1.png" alt="轮播图">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/t2.png" alt="轮播图">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/t3.png" alt="轮播图">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/t4.png" alt="轮播图">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/t5.png" alt="轮播图">
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
+                <div class="swiper-pagination banner_page"></div>
             </div>
         </div>
     </div>
@@ -431,8 +432,53 @@
             }
 
         })
+        $('.btn').on('click', function () {
+            $(this).addClass("headNavActive");
+        })
+        swiperJq()
     })
+    var swiperJq = function (){
+        var mySwiper = new Swiper("#certify", {
+            loop: true,
+            loopedSlides: 5,
+            slidesPerView: 'auto',
+            autoplay: true,
+            centeredSlides: true,
+            initialSlide: 2,
+            watchSlidesProgress: true,
+            pagination: {
+                el: '.banner_page',
+                clickable: true,
+            },
+            on: {
+                progress: function (progress) {
+                    for (i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        var slideProgress = this.slides[i].progress;
+                        if (Math.abs(slideProgress) > 1) {
+                            var modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
+                        }
+                        translate = slideProgress * modify * 318 + 'px';
+                        scale = 1 - Math.abs(slideProgress) / 5;
+                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 1);
+                        if (Math.abs(slideProgress) > 3) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+                },
+                setTransition: function (transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i)
+                        slide.transition(transition);
+                    }
 
+                }
+            }
+        })
+    }
 </script>
 
 </html>

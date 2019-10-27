@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>两边渐小的轮播图</title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
+		<style type="text/css">
+			#banner{
+				margin: 100px auto 0;
+			}
+			.swiper-slide{
+				width: 600px;
+				height: 450px;
+			}
+			.banner_page{
+				margin: 20px auto;
+				left: 0;
+				right: 0;
+			}
+			.banner_page span{
+				margin: 0 10px;
+			}
+			h2{
+				text-align: center;
+			}
+			.swiper-pagination-bullet-active{
+				width: 16px;
+				border-radius: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>两边渐小的轮播图-拖拽轮播切换</h2>
+        <div class="swiper-container" id="banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../images/t1.png" alt="轮播图">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/t2.png" alt="轮播图">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/t3.png" alt="轮播图">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/t4.png" alt="轮播图">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/t5.png" alt="轮播图">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination banner_page"></div>
+        <script src="../js/jquery.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var mySwiper = new Swiper("#banner",{
+					loop: true,
+					loopedSlides: 5,
+				    slidesPerView: 'auto',
+				    autoplay: true,
+				    centeredSlides:true,
+				    initialSlide :2,
+				    watchSlidesProgress: true,
+				    pagination: {
+                        el: '.banner_page',
+                        clickable :true,
+                    },
+                    on: {
+                        progress: function(progress) {
+                            for (i = 0; i < this.slides.length; i++) {
+                                var slide = this.slides.eq(i);
+                                var slideProgress = this.slides[i].progress;
+                                if (Math.abs(slideProgress) > 1) {
+                                    var modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
+                                }
+                                translate = slideProgress * modify * 318 + 'px';
+                                scale = 1 - Math.abs(slideProgress) / 5;
+                                zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                                slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                                slide.css('zIndex', zIndex);
+                                slide.css('opacity', 1);
+                                if (Math.abs(slideProgress) > 3) {
+                                    slide.css('opacity', 0);
+                                }
+                            }
+                        },
+                        setTransition: function(transition) {
+                            for (var i = 0; i < this.slides.length; i++) {
+                                var slide = this.slides.eq(i)
+                                slide.transition(transition);
+                            }
+
+                        }
+                    }
+				})
+			})
+		</script>
+	</body>
+</html>
