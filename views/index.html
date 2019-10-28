@@ -16,7 +16,9 @@
     <header class="header">
         <div class="header-content banxin">
             <h1 class="header-logo">
-                <img src="../images/logo.jpg" alt="">
+                <a href="./index.html">
+                    <img src="../images/logo.jpg" alt="">
+                </a>
             </h1>
             <div class="head-nav">
                 <ul>
@@ -40,8 +42,8 @@
         <div class="content-school">
             <div class="school banxin">
                 <div class="school-text">
-                    <p>璞思学院</p>
-                    <p><span>传道受业</span><span>德行天下</span></p>
+                    <h2>璞思学院</h2>
+                    <p><span>传道受业</span>德行天下</p>
                 </div>
             </div>
         </div>
@@ -289,23 +291,35 @@
                     </div>
                     <!-- 右边表单 -->
                     <div class="form-right">
-                        <form action="">
+                        <form id='formId' action="" name="userMessage">
                             <div class="form-title">报名</div>
-                            <div class="get-user-name">
+                            <div class="get-user-message">
+                                <span class="iconfont">&#xe61c;</span>
                                 <input type="text" placeholder="姓名" name="userName">
                             </div>
-                            <div class="get-user-phone">
+                            <div class="get-user-message">
+                                <span class="iconfont">&#xe604;</span>
                                 <input type="text" placeholder="电话号码" name="userPhone">
                             </div>
-                            <div class="get-subject">
-                                <input type="text" placeholder="所报学科" name="subject">
+                            <div class="get-user-message get-subject">
+                                <span class="iconfont">&#xe621;</span>
+                                <input type="text" placeholder="所报学科" name="subject" disabled>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>UI</li>
+                                    <li>WEB</li>
+                                    <li>影视后期</li>
+                                    <li>PHP</li>
+                                </ul>
+                                <span class="openSelect"></span>
                             </div>
-                            <div class="get-qq-num">
+                            <div class="get-user-message">
+                                <span class="qq-number"></span>
                                 <input type="text" placeholder="QQ号码" name="qqNum">
                             </div>
                             <div class="confirm">
                                 <span>准确真实的填写你的个人信息&nbsp;即可获得免费试听课程,招生老师会及时与你取得联系</span>
-                                <button class="confirm-apply" disabled>确认报名</button>
+                                <button class="confirm-apply userMessageBtn" form="userMessage" type="submit">确认报名</button>
                             </div>
                         </form>
                     </div>
@@ -332,7 +346,9 @@
                             <img src="../images/t2.png" alt="轮播图">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/t3.png" alt="轮播图">
+
+                            <video src=" " controls="controls"></video>
+                            <!-- <img src="../images/t3.png" alt="轮播图"> -->
                         </div>
                         <div class="swiper-slide">
                             <img src="../images/t4.png" alt="轮播图">
@@ -342,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination banner_page"></div>
+                <!-- <div class="swiper-pagination banner_page"></div> -->
             </div>
         </div>
     </div>
@@ -350,7 +366,7 @@
     <footer class="foot">
         <div class="foot-content banxin">
             <div class="foot-map">
-                <div class="map">
+                <div id="map">
 
                 </div>
             </div>
@@ -374,9 +390,7 @@
                     <img src="../images/code2.jpg" alt="">
                 </div>
             </div>
-            <div class="go-top">
-
-            </div>
+            <div class="go-top iconfont">&#xe668;</div>
         </div>
         <!-- 网站版权信息 -->
         <div class="copyright">
@@ -386,99 +400,8 @@
 </body>
 <script src="../js/swiper.min.js"></script>
 <script src="../js/jquery.js"></script>
-<script>
-    $(function () {
-        certifySwiper = new Swiper('#certify .swiper-container', {
-            watchSlidesProgress: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            loop: true,
-            loopedSlides: 5,
-            autoplay: true,
-            // navigation: {
-            //     nextEl: '.swiper-button-next',
-            //     prevEl: '.swiper-button-prev',
-            // },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            on: {
-                progress: function (progress) {
-                    for (i = 0; i < this.slides.length; i++) {
-                        var slide = this.slides.eq(i);
-                        var slideProgress = this.slides[i].progress;
-                        modify = 1;
-                        if (Math.abs(slideProgress) > 1) {
-                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
-                        }
-                        translate = slideProgress * modify * 250 + 'px';
-                        scale = 1 - Math.abs(slideProgress) / 5;
-                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-                        slide.css('zIndex', zIndex);
-                        slide.css('opacity', 1);
-                        if (Math.abs(slideProgress) > 3) {
-                            slide.css('opacity', 0);
-                        }
-                    }
-                },
-                setTransition: function (transition) {
-                    for (var i = 0; i < this.slides.length; i++) {
-                        var slide = this.slides.eq(i)
-                        slide.transition(transition);
-                    }
-
-                }
-            }
-
-        })
-        $('.btn').on('click', function () {
-            $(this).addClass("headNavActive");
-        })
-        swiperJq()
-    })
-    var swiperJq = function (){
-        var mySwiper = new Swiper("#certify", {
-            loop: true,
-            loopedSlides: 5,
-            slidesPerView: 'auto',
-            autoplay: true,
-            centeredSlides: true,
-            initialSlide: 2,
-            watchSlidesProgress: true,
-            pagination: {
-                el: '.banner_page',
-                clickable: true,
-            },
-            on: {
-                progress: function (progress) {
-                    for (i = 0; i < this.slides.length; i++) {
-                        var slide = this.slides.eq(i);
-                        var slideProgress = this.slides[i].progress;
-                        if (Math.abs(slideProgress) > 1) {
-                            var modify = (Math.abs(slideProgress) - 1) * 0.4 + 1;
-                        }
-                        translate = slideProgress * modify * 318 + 'px';
-                        scale = 1 - Math.abs(slideProgress) / 5;
-                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-                        slide.css('zIndex', zIndex);
-                        slide.css('opacity', 1);
-                        if (Math.abs(slideProgress) > 3) {
-                            slide.css('opacity', 0);
-                        }
-                    }
-                },
-                setTransition: function (transition) {
-                    for (var i = 0; i < this.slides.length; i++) {
-                        var slide = this.slides.eq(i)
-                        slide.transition(transition);
-                    }
-
-                }
-            }
-        })
-    }
-</script>
+<script type="text/javascript"
+    src="http://api.map.baidu.com/getscript?v=3.0&ak=vdVIwdPkde2vN1I3SDrRH3Kfo6XnjgPk"></script>
+<script src="../js/index.js"></script>
 
 </html>
