@@ -58,6 +58,9 @@
   font-weight: normal;
   font-size: 1.8em;
 }
+.header .headNavActive {
+  background: linear-gradient(to right, #3359ac, #1ba3d9);
+}
 .content {
   width: 100%;
 }
@@ -75,24 +78,18 @@
   justify-content: center;
   align-items: center;
 }
-.content .content-school .school .school-text p {
-  font-size: 36px;
-}
-.content .content-school .school .school-text p:nth-child(1) {
+.content .content-school .school .school-text h2 {
   font-size: 100px;
+  font-weight: normal;
+  position: relative;
 }
-.content .content-school .school .school-text p:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
-}
-.content .content-school .school .school-text p:nth-child(2) span {
+.content .content-school .school .school-text p {
+  font-size: 40px;
+  text-align: center;
   font-weight: 100;
 }
-.content .content-school .school .school-text p:nth-child(2) span:nth-child(1) {
-  padding-left: 10px;
-}
-.content .content-school .school .school-text p:nth-child(2) span:nth-child(2) {
-  padding-right: 10px;
+.content .content-school .school .school-text p span {
+  margin-right: 50px;
 }
 .content .content-javaEE .school {
   display: flex;
@@ -258,6 +255,10 @@
   height: 90%;
   float: right;
 }
+.content .school-purpose .purpose .purpose-photo img {
+  width: 100%;
+  height: 100%;
+}
 .content .school-objective .objective {
   height: 423px;
   display: flex;
@@ -279,13 +280,20 @@
   width: 75%;
   height: 70%;
 }
-.content .school-objective .objective .objective-text span {
+.content .school-objective .objective .objective-text ul {
+  text-align: center;
+}
+.content .school-objective .objective .objective-text ul li {
   margin-bottom: 15px;
 }
 .content .school-objective .objective .objective-text .icon {
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  margin-top: 15px;
+}
+.content .school-objective .objective .objective-text .icon img {
+  width: 100%;
+  height: 100%;
 }
 .content .school-system {
   background-color: var(--themeBackgroundColor);
@@ -379,7 +387,10 @@
 }
 .content .school-teach-idea .school-photo {
   height: 650px;
-  background-color: bisque;
+}
+.content .school-teach-idea .school-photo img {
+  width: 100%;
+  height: 100%;
 }
 .foot {
   height: 360px;
@@ -399,10 +410,11 @@
   box-sizing: border-box;
   margin-right: 55px;
 }
-.foot .foot-content .foot-map .map {
+.foot .foot-content .foot-map #map {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  border: 2px solid #ededed;
 }
 .foot .foot-content .foot-links {
   width: 450px;
@@ -463,13 +475,18 @@
   height: 100px;
 }
 .foot .foot-content .go-top {
-  width: 50px;
-  height: 50px;
-  background-color: #252525;
+  width: 45px;
+  height: 45px;
+  background-color: #000;
   border-radius: 50%;
   position: fixed;
-  bottom: 80px;
+  bottom: 150px;
   right: 50px;
+  text-align: center;
+  line-height: 45px;
+  transform: rotate(180deg);
+  font-size: 20px;
+  cursor: pointer;
 }
 .foot .copyright {
   color: #757575;

@@ -5,30 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>报名流程</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/forecastName.css">
 </head>
-<script src="../js/jquery.js"></script>
-<script>
-</script>
-
 <body>
     <!-- 头部logo，导航，联系电话 -->
     <header class="header">
         <div class="header-content banxin">
             <h1 class="header-logo">
-                <img src="../images/logo.jpg" alt="">
+                <a href="./index.html">
+                    <img src="../images/logo.jpg" alt="">
+                </a>
             </h1>
             <div class="head-nav">
                 <ul>
-                    <li><a class="btn" href="#">首页</a></li>
-                    <li><a class="btn" href="#">课程介绍</a></li>
-                    <li><a class="btn" href="#">校园新闻</a></li>
+                    <li><a class="btn" href="./index.html">首页</a></li>
+                    <li><a class="btn" href="./javaOutLine.html">课程介绍</a></li>
+                    <li><a class="btn" href="./news.html">校园新闻</a></li>
                     <li><a class="btn" href="#">师资力量</a></li>
-                    <li><a class="btn" href="#">学校风采</a></li>
-                    <li><a class="btn" href="#">报名流程</a></li>
-                    <li><a class="btn" href="#">关于我们</a></li>
+                    <li><a class="btn" href="./environment.html">学校风采</a></li>
+                    <li><a class="btn" href="./forecastName.html">报名流程</a></li>
+                    <li><a class="btn" href="./abounUs.html">关于我们</a></li>
                 </ul>
             </div>
             <div class="header-call">
@@ -42,8 +40,8 @@
         <div class="content-school">
             <div class="school banxin">
                 <div class="school-text">
-                    <p>璞思学院</p>
-                    <p><span>传道受业</span><span>德行天下</span></p>
+                    <h2>璞思学院</h2>
+                    <p><span>传道受业</span>德行天下</p>
                 </div>
             </div>
         </div>
@@ -70,9 +68,9 @@
                         <h2>5步缔造顶尖UI设计师</h2>
                     </li>
                     <li>
-                        <h4>突破职场瓶颈，升职加薪不是梦</h4>
+                        <h4>突破职场瓶颈，&nbsp;&nbsp;升职加薪不是梦</h4>
                     </li>
-                    <li><span>先培训后就业 进入名企拿高薪</span></li>
+                    <li><span>先培训后就业&nbsp;&nbsp;&nbsp;&nbsp;进入名企拿高薪</span></li>
                     <li>
                         <ul>
                             <li>多元化服务</li>
@@ -94,25 +92,33 @@
                 </div>
                 <form class="forecast-user-message">
                     <div class="message-input">
-                        <span></span>
+                        <span>
+                            <img src="../images/name.png" alt="">
+                        </span>
                         <input name="userName" type="text" placeholder="真实姓名">
                     </div>
                     <div class="message-input">
-                        <span></span>
+                        <span>
+                            <img src="../images/xueke.png" alt="">
+                        </span>
                         <input name='subject' type="text" placeholder="所报学科">
                     </div>
                     <div class="message-input">
-                        <span></span>
+                        <span>
+                            <img src="../images/phone.png" alt="">
+                        </span>
                         <input name="userPhone" type="text" placeholder="手机号码">
                     </div>
                     <div class="message-input">
-                        <span></span>
+                        <span>
+                            <img src="../images/qq.png" alt="">
+                        </span>
                         <input name="userQQ" type="text" placeholder="QQ号码">
                     </div>
                 </form>
                 <div class="forecast-btn">
                     <h2>开班座位有限，预报名可以优先享有占座权</h2>
-                    <span>(温馨提示：请保持手机，咨询老师将为您提供专属的一对一报名服务)</span>
+                    <span>（ 温馨提示：请保持手机，咨询老师将为您提供专属的一对一报名服务 ）</span>
                     <button>立即报名</button>
                 </div>
             </div>
@@ -123,7 +129,7 @@
     <footer class="foot">
         <div class="foot-content banxin">
             <div class="foot-map">
-                <div class="map">
+                <div id="map">
 
                 </div>
             </div>
@@ -147,9 +153,7 @@
                     <img src="../images/code2.jpg" alt="">
                 </div>
             </div>
-            <div class="go-top">
-
-            </div>
+            <div class="go-top iconfont">&#xe668;</div>
         </div>
         <!-- 网站版权信息 -->
         <div class="copyright">
@@ -157,5 +161,7 @@
         </div>
     </footer>
 </body>
-
+<script src="../js/jquery.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=3.0&ak=vdVIwdPkde2vN1I3SDrRH3Kfo6XnjgPk"></script>
+<script src="../js/Map.js"></script>
 </html>

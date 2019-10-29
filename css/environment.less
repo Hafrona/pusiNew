@@ -48,7 +48,6 @@
                     }
                 }
             }
-
         }
 
         .header-call {
@@ -70,6 +69,9 @@
         }
     }
 
+    .headNavActive {
+        background: linear-gradient(to right, #3359ac, #1ba3d9);
+    }
 }
 
 // 内容样式
@@ -94,28 +96,20 @@
             align-items: center;
 
             .school-text {
+                h2 {
+                    font-size: 100px;
+                    font-weight: normal;
+                    position: relative;
+                }
+
                 p {
-                    font-size: 36px;
 
-                    &:nth-child(1) {
-                        font-size: 100px;
-                    }
+                    font-size: 40px;
+                    text-align: center;
+                    font-weight: 100;
 
-                    &:nth-child(2) {
-                        display: flex;
-                        justify-content: space-between;
-
-                        span {
-                            font-weight: 100;
-
-                            &:nth-child(1) {
-                                padding-left: 10px;
-                            }
-
-                            &:nth-child(2) {
-                                padding-right: 10px;
-                            }
-                        }
+                    span {
+                        margin-right: 50px;
                     }
                 }
             }
@@ -164,7 +158,7 @@
                         bottom: 0px;
                         color: #363636;
                         filter: blur(6px);
-                        opacity: .6;
+                        opacity: 0.6;
                     }
 
                     span {
@@ -188,7 +182,6 @@
     //ui设计开始
     .content-ui {
         .school {
-
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -309,16 +302,26 @@
                     .title-bottom-photo {
                         width: 570px;
                         height: 425px;
-                        background-color: #fff;
                         border-radius: 30px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 30px;
+                        }
                     }
                 }
 
                 .environment-right-photo {
                     width: 768px;
                     height: 582px;
-                    background-color: aqua;
                     border-radius: 30px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 30px;
+                    }
                 }
             }
 
@@ -330,9 +333,14 @@
                 .environment-bottom-photo2 {
                     width: 488px;
                     height: 437px;
-                    background-color: #fff;
                     border-radius: 30px;
                     margin-right: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 30px;
+                    }
                 }
 
                 .environment-bottom-photo2 {
@@ -372,7 +380,6 @@
                 text-align: center;
                 margin: 0 auto;
                 padding: 32px 0;
-                width: 50%;
                 font-size: 35px;
                 font-weight: normal;
             }
@@ -421,13 +428,23 @@
                 .classroom-photo {
                     width: 30%;
                     height: 585px;
-                    background-color: #fff;
                     border-radius: 30px;
                     margin-left: 17px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 30px;
+                    }
 
                     &:last-child {
                         width: 40%;
                         border-radius: 30px 0 0 30px;
+
+                        img {
+                            width: 100%;
+                            border-radius: 30px 0 0 30px;
+                        }
                     }
                 }
             }
@@ -458,9 +475,14 @@
                 .equipment-photo-index {
                     width: 33.3%;
                     height: 400px;
-                    background-color: #fff;
                     margin-right: 15px;
                     border-radius: 30px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 30px;
+                    }
 
                     &:last-child {
                         margin: 0;
@@ -491,10 +513,11 @@
             box-sizing: border-box;
             margin-right: 55px;
 
-            .map {
+            #map {
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
+                border: 2px solid #ededed;
             }
         }
 
@@ -571,13 +594,18 @@
         }
 
         .go-top {
-            width: 50px;
-            height: 50px;
-            background-color: #252525;
+            width: 45px;
+            height: 45px;
+            background-color: #000;
             border-radius: 50%;
             position: fixed;
-            bottom: 80px;
+            bottom: 150px;
             right: 50px;
+            text-align: center;
+            line-height: 45px;
+            transform: rotate(180deg);
+            font-size: 20px;
+            cursor: pointer;
         }
     }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>首页</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/swiper.min.css">
@@ -25,10 +25,10 @@
                     <li><a class="btn" href="./index.html">首页</a></li>
                     <li><a class="btn" href="./javaOutLine.html">课程介绍</a></li>
                     <li><a class="btn" href="./news.html">校园新闻</a></li>
-                    <li><a class="btn" href="./abounUs.html">师资力量</a></li>
+                    <li><a class="btn" href="#">师资力量</a></li>
                     <li><a class="btn" href="./environment.html">学校风采</a></li>
                     <li><a class="btn" href="./forecastName.html">报名流程</a></li>
-                    <li><a class="btn" href="#">关于我们</a></li>
+                    <li><a class="btn" href="./abounUs.html">关于我们</a></li>
                 </ul>
             </div>
             <div class="header-call">
@@ -172,8 +172,8 @@
                 <div class="school-news-content">
                     <!-- 左边新闻列表部分 -->
                     <div class="school-news-left">
-                        <div class="new-data">
-                            <div class="box"></div>
+                        <a href="#" class="new-data">
+                            <div class="new-data-photo"></div>
                             <div class="news-data-text">
                                 <div class="news-text-left">
                                     <h2>我们为什么选择java?</h2>
@@ -183,9 +183,9 @@
                                     <span>2019/8/15</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="new-data">
-                            <div class="box"></div>
+                        </a>
+                        <a href="#" class="new-data">
+                            <div class="new-data-photo"></div>
                             <div class="news-data-text">
                                 <div class="news-text-left">
                                     <h2>我们为什么选择java?</h2>
@@ -195,9 +195,9 @@
                                     <span>2019/8/15</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="new-data">
-                            <div class="box"></div>
+                        </a>
+                        <a href="#" class="new-data">
+                            <div class="new-data-photo"></div>
                             <div class="news-data-text">
                                 <div class="news-text-left">
                                     <h2>我们为什么选择java?</h2>
@@ -207,12 +207,12 @@
                                     <span>2019/8/15</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <!-- 右边图片部分 -->
                     <div class="school-news-photo">
                         <div class="news-photo">
-
+                            <img src="../images/school.jpg" alt="">
                         </div>
                         <p>我们为什么选择JAVA?</p>
                     </div>
@@ -261,8 +261,21 @@
                         <p>PUSI&nbsp;FAMILIAR</p>
                     </div>
                 </div>
+                <!-- 璞思大家庭轮播图 -->
                 <div class="pusi-family-swiper">
-
+                    <div class="swiper-container" id="familiarSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../images/abount03.jpg" alt="轮播图">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/abount01.jpg" alt="轮播图">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/abount04.jpg" alt="轮播图">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -291,8 +304,8 @@
                     </div>
                     <!-- 右边表单 -->
                     <div class="form-right">
+                        <div class="form-title"><h2>报名</h2></div>
                         <form id='formId' action="" name="userMessage">
-                            <div class="form-title">报名</div>
                             <div class="get-user-message">
                                 <span class="iconfont">&#xe61c;</span>
                                 <input type="text" placeholder="姓名" name="userName">
@@ -304,13 +317,6 @@
                             <div class="get-user-message get-subject">
                                 <span class="iconfont">&#xe621;</span>
                                 <input type="text" placeholder="所报学科" name="subject" disabled>
-                                <ul>
-                                    <li>Java</li>
-                                    <li>UI</li>
-                                    <li>WEB</li>
-                                    <li>影视后期</li>
-                                    <li>PHP</li>
-                                </ul>
                                 <span class="openSelect"></span>
                             </div>
                             <div class="get-user-message">
@@ -319,7 +325,8 @@
                             </div>
                             <div class="confirm">
                                 <span>准确真实的填写你的个人信息&nbsp;即可获得免费试听课程,招生老师会及时与你取得联系</span>
-                                <button class="confirm-apply userMessageBtn" form="userMessage" type="submit">确认报名</button>
+                                <button class="confirm-apply userMessageBtn" form="userMessage"
+                                    type="submit">确认报名</button>
                             </div>
                         </form>
                     </div>
@@ -340,10 +347,10 @@
                 <div class="swiper-container" id="certify">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../images/t1.png" alt="轮播图">
+                            <img src="../images/abount03.jpg" alt="轮播图">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/t2.png" alt="轮播图">
+                            <img src="../images/abount01.jpg" alt="轮播图">
                         </div>
                         <div class="swiper-slide">
 
@@ -351,10 +358,10 @@
                             <!-- <img src="../images/t3.png" alt="轮播图"> -->
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/t4.png" alt="轮播图">
+                            <img src="../images/abount02.jpg" alt="轮播图">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../images/t5.png" alt="轮播图">
+                            <img src="../images/abount04.jpg" alt="轮播图">
                         </div>
                     </div>
                 </div>
@@ -402,6 +409,7 @@
 <script src="../js/jquery.js"></script>
 <script type="text/javascript"
     src="http://api.map.baidu.com/getscript?v=3.0&ak=vdVIwdPkde2vN1I3SDrRH3Kfo6XnjgPk"></script>
+<script src="../js/Map.js"></script>
 <script src="../js/index.js"></script>
 
 </html>
