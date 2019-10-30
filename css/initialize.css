@@ -1,0 +1,81 @@
+html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+
+    content: "";
+
+    height: 0;
+
+    line-height: 0;
+
+    display: block;
+
+    visibility: hidden;
+
+    clear: both;
+
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+video {
+    outline: none;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+body {
+    font-size: 62.5%;
+    --themeBackgroundColor: #363636;
+    background-color: #252525;
+    color: #fff;
+    min-width: 1400px;
+}
+
+.banxin {
+    width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}

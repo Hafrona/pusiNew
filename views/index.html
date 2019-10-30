@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
+    <!-- 标签默认样式 -->
+    <link rel="stylesheet" href="../css/initialize.css">
+    <!-- 页面公共部分样式 -->
     <link rel="stylesheet" href="../css/common.css">
+    <!-- 该页面样式 -->
     <link rel="stylesheet" href="../css/index.css">
+    <!-- 轮播图 -->
     <link rel="stylesheet" href="../css/swiper.min.css">
 </head>
 
@@ -20,15 +25,15 @@
                     <img src="../images/logo.jpg" alt="">
                 </a>
             </h1>
-            <div class="head-nav">
+            <div class="header-nav">
                 <ul>
                     <li><a class="btn" href="./index.html">首页</a></li>
-                    <li><a class="btn" href="./javaOutLine.html">课程介绍</a></li>
+                    <li><a class="btn" href="./introduce.html">课程介绍</a></li>
                     <li><a class="btn" href="./news.html">校园新闻</a></li>
                     <li><a class="btn" href="#">师资力量</a></li>
                     <li><a class="btn" href="./environment.html">学校风采</a></li>
-                    <li><a class="btn" href="./forecastName.html">报名流程</a></li>
-                    <li><a class="btn" href="./abounUs.html">关于我们</a></li>
+                    <li><a class="btn" href="./applyCourse.html">报名流程</a></li>
+                    <li><a class="btn" href="./aboutPusi.html">关于我们</a></li>
                 </ul>
             </div>
             <div class="header-call">
@@ -51,11 +56,13 @@
         <div class="content-javaEE">
             <div class="school banxin">
                 <div class="javaEE-explain">
-                    <p class="zero"><span>没有基础</span>没有经验如何在职场上脱颖而出</p>
-                    <h2>JavaEE</h2>
-                    <p class="advantage"><span>4</span>大课程优势</p>
-                    <h3>让你成为中高端人才</h3>
-                    <p>MAKE&nbsp;YOU&nbsp;A&nbsp;MID-TO-HIGH-END&nbsp;TALENT</p>
+                    <ul>
+                        <li><span>没有基础</span>没有经验如何在职场上脱颖而出</li>
+                        <li><h2>JavaEE</h2></li>
+                        <li><h3><span>4</span>大课程优势</h3></li>
+                        <li><h4>让你成为中高端人才</h4></li>
+                        <li>MAKE&nbsp;YOU&nbsp;A&nbsp;MID-TO-HIGH-END&nbsp;TALENT</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -64,7 +71,7 @@
             <div class="school banxin">
                 <ul class="ui-design">
                     <li>
-                        <h3>全链路UI3.0,分阶段学习，因材施教</h3>
+                        <h3>全链路UI3.0，&nbsp;分阶段学习，&nbsp;因材施教</h3>
                     </li>
                     <li>
                         <h2>5步缔造顶尖UI设计师</h2>
@@ -300,27 +307,38 @@
                     </div>
                     <!-- 中间箭头 -->
                     <div class="point-to">
-                        <img src="../images/jiantou.jpg" alt="">
+                        <span></span>
+                        <!-- <img src="../images/jiantou.jpg" alt=""> -->
                     </div>
                     <!-- 右边表单 -->
                     <div class="form-right">
                         <div class="form-title"><h2>报名</h2></div>
                         <form id='formId' action="" name="userMessage">
                             <div class="get-user-message">
-                                <span class="iconfont">&#xe61c;</span>
+                                <span>
+                                    <img src="../images/username.png" alt="">
+                                </span>
                                 <input type="text" placeholder="姓名" name="userName">
                             </div>
                             <div class="get-user-message">
-                                <span class="iconfont">&#xe604;</span>
+                                <span>
+                                    <img src="../images/dianhua.png" alt="">
+                                </span>
                                 <input type="text" placeholder="电话号码" name="userPhone">
                             </div>
                             <div class="get-user-message get-subject">
-                                <span class="iconfont">&#xe621;</span>
+                                <span>
+                                    <img src="../images/suobaoxueke.png" alt="">
+                                </span>
                                 <input type="text" placeholder="所报学科" name="subject" disabled>
-                                <span class="openSelect"></span>
+                                <span class="openSelect">
+
+                                </span>
                             </div>
                             <div class="get-user-message">
-                                <span class="qq-number"></span>
+                                <span class="qq-number">
+
+                                </span>
                                 <input type="text" placeholder="QQ号码" name="qqNum">
                             </div>
                             <div class="confirm">
@@ -355,7 +373,6 @@
                         <div class="swiper-slide">
 
                             <video src=" " controls="controls"></video>
-                            <!-- <img src="../images/t3.png" alt="轮播图"> -->
                         </div>
                         <div class="swiper-slide">
                             <img src="../images/abount02.jpg" alt="轮播图">
@@ -370,14 +387,14 @@
         </div>
     </div>
     <!-- 底部位置，招生热线，二维码 -->
-    <footer class="foot">
-        <div class="foot-content banxin">
-            <div class="foot-map">
+    <footer class="footer">
+        <div class="footer-content banxin">
+            <div class="footer-map">
                 <div id="map">
 
                 </div>
             </div>
-            <div class="foot-links">
+            <div class="footer-links">
                 <h2>全国免费招生热线：400-1581-881</h2>
                 <ul>
                     <li><span>客服手机：</span>18020608313</li>
@@ -387,7 +404,7 @@
                     <li><span>地址：</span>莆田市城厢区华林经济开发区腾飞路66号骠骑大厦4层</li>
                 </ul>
             </div>
-            <div class="foot-WeChat">
+            <div class="footer-WeChat">
                 <div class="code-left">
                     <p>关注公众账号</p>
                     <img src="../images/code1.jpg" alt="">
@@ -397,19 +414,23 @@
                     <img src="../images/code2.jpg" alt="">
                 </div>
             </div>
-            <div class="go-top iconfont">&#xe668;</div>
+            <div class="go-top"></div>
         </div>
         <!-- 网站版权信息 -->
         <div class="copyright">
-            <p>©&nbsp;2019&nbsp;HUGO.&nbsp;All&nbsp;rights&nbsp;resevered.&nbsp;Designed&nbsp;by&nbsp;DZOAN</p>
+            <p>&copy;&nbsp;2019&nbsp;HUGO.&nbsp;All&nbsp;rights&nbsp;resevered.&nbsp;Designed&nbsp;by&nbsp;DZOAN</p>
         </div>
     </footer>
 </body>
+<!-- 轮播图插件 -->
 <script src="../js/swiper.min.js"></script>
+<!-- jq -->
 <script src="../js/jquery.js"></script>
-<script type="text/javascript"
-    src="http://api.map.baidu.com/getscript?v=3.0&ak=vdVIwdPkde2vN1I3SDrRH3Kfo6XnjgPk"></script>
-<script src="../js/Map.js"></script>
-<script src="../js/index.js"></script>
+<!-- 百度地图 -->
+<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=3.0&ak=vdVIwdPkde2vN1I3SDrRH3Kfo6XnjgPk"></script>
+<!-- 公共 -->
+<script src="../js/common.js"></script>
+<!-- 该页面 -->
+<script src="../js/pageJs/index.js"></script>
 
 </html>

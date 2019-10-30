@@ -1,71 +1,4 @@
 /*
- *头部样式
- *
-*/
-.header {
-  height: 96px;
-  width: 100%;
-  margin: 0 auto;
-  border-bottom: 1px solid #3b3b3b;
-}
-.header .header-content {
-  display: flex;
-  margin: 0 auto;
-}
-.header .header-content .header-logo {
-  width: 15%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .header-content .head-nav {
-  width: 70%;
-  height: 100%;
-}
-.header .header-content .head-nav ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.header .header-content .head-nav ul li {
-  height: 100%;
-  display: flex;
-  width: 13%;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6em;
-}
-.header .header-content .head-nav ul li a {
-  width: 80%;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 20px;
-}
-.header .header-content .head-nav ul li a:hover {
-  border: 2px solid #404040;
-  border-radius: 20px;
-}
-.header .header-content .header-call {
-  width: 15%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-}
-.header .header-content .header-call p {
-  font-size: 1em;
-}
-.header .header-content .header-call h2 {
-  font-weight: normal;
-  font-size: 1.8em;
-}
-.header .headNavActive {
-  background: linear-gradient(to right, #3359ac, #1ba3d9);
-}
-/*
 *   内容样式
 *   content-javaEE              javaEE简介
 *   content-ui                  UI简介
@@ -78,130 +11,6 @@
 *   content-abount-us           关于我们
 *   foot                        底部样式
 */
-.content {
-  width: 100%;
-}
-.content .content-school,
-.content .content-javaEE,
-.content .content-ui {
-  border: 1px solid #050505;
-  margin-bottom: 26px;
-  background-color: var(--themeBackgroundColor);
-  height: 364px;
-}
-.content .content-school .school {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .content-school .school .school-text h2 {
-  font-size: 100px;
-  font-weight: normal;
-  position: relative;
-}
-.content .content-school .school .school-text p {
-  font-size: 40px;
-  text-align: center;
-  font-weight: 100;
-}
-.content .content-school .school .school-text p span {
-  margin-right: 50px;
-}
-.content .content-javaEE .school {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .content-javaEE .school .javaEE-explain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.content .content-javaEE .school .javaEE-explain .zero {
-  font-size: 18px;
-}
-.content .content-javaEE .school .javaEE-explain .zero span {
-  margin-right: 40px;
-}
-.content .content-javaEE .school .javaEE-explain h2 {
-  font-size: 126px;
-  line-height: 100%;
-}
-.content .content-javaEE .school .javaEE-explain .advantage {
-  font-size: 72px;
-  font-weight: normal;
-}
-.content .content-javaEE .school .javaEE-explain .advantage span {
-  font-weight: 600;
-  font-size: 106px;
-  line-height: 100%;
-}
-.content .content-javaEE .school .javaEE-explain h3 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 10px;
-}
-.content .content-ui .school {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .content-ui .school .ui-design {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.content .content-ui .school .ui-design > li:nth-last-child(2) {
-  margin: 20px 0;
-}
-.content .content-ui .school .ui-design > li h3 {
-  font-weight: normal;
-  font-size: 24px;
-}
-.content .content-ui .school .ui-design > li h2 {
-  font-weight: normal;
-  font-size: 84px;
-}
-.content .content-ui .school .ui-design > li h4 {
-  font-weight: normal;
-  font-size: 26px;
-}
-.content .content-ui .school .ui-design > li span {
-  font-size: 20px;
-  position: relative;
-}
-.content .content-ui .school .ui-design > li span::after {
-  content: " ";
-  width: 100px;
-  height: 1px;
-  background-color: #fff;
-  position: absolute;
-  right: -50%;
-  top: 50%;
-}
-.content .content-ui .school .ui-design > li span::before {
-  content: " ";
-  width: 100px;
-  height: 1px;
-  background-color: #fff;
-  position: absolute;
-  left: -50%;
-  top: 50%;
-}
-.content .content-ui .school .ui-design > li ul li {
-  padding: 5px 18px;
-  font-size: 16px;
-  float: left;
-  border: 1px solid #fff;
-  border-radius: 15px;
-  margin: 0px 20px;
-  background-color: #484848;
-}
 .content .content-curriculum {
   border: 1px solid #050505;
   background-color: var(--themeBackgroundColor);
@@ -387,7 +196,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0;
   position: relative;
 }
 .content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul::after {
@@ -401,8 +210,9 @@
   transform: translateX(-50%);
 }
 .content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul li {
-  font-size: 16px;
+  font-size: 17px;
   color: #7b7b7b;
+  line-height: 27px;
 }
 .content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul li:nth-child(3) {
   margin-bottom: 20px;
@@ -663,26 +473,14 @@
   font-size: 46px;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-left .form-left-start::after {
-  content: "";
+  content: " ";
+  background-image: url(../images/bolangxian.png);
+  width: 65px;
+  height: 10px;
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 65px;
-  height: 3px;
-  background: linear-gradient(135deg, transparent, transparent 45%, #fff, transparent 55%, transparent 100%), linear-gradient(45deg, transparent, transparent 45%, #fff, transparent 55%, transparent 100%);
-  background-size: 0.5em 0.5em;
-  background-repeat: repeat-x, repeat-x;
-}
-.content .content-registration-process .registration-process .registration-process-form .form-left .form-left-start::before {
-  content: " ";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 65px;
-  height: 3px;
-  background: linear-gradient(135deg, transparent, transparent 45%, #fff, transparent 55%, transparent 100%), linear-gradient(45deg, transparent, transparent 45%, #fff, transparent 55%, transparent 100%);
-  background-size: 0.5em 0.5em;
-  background-repeat: repeat-x, repeat-x;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-left h3 {
   font-size: 18px;
@@ -693,7 +491,14 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+}
+.content .content-registration-process .registration-process .registration-process-form .point-to span {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/jiantou.jpg);
+  background-repeat: no-repeat;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right {
   width: 30%;
@@ -734,9 +539,12 @@
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message span {
   width: 10%;
-  font-size: 24px;
-  color: #666666;
   height: 60%;
+  display: flex;
+  align-items: center;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message span img {
+  margin-left: 4px;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message .qq-number {
   display: inline-block;
@@ -841,107 +649,4 @@
 .content .content-abount-us .abount-us #certify .swiper-pagination-bullet-active {
   width: 16px;
   border-radius: 8px;
-}
-.foot {
-  height: 360px;
-  background-color: var(--themeBackgroundColor);
-  border: 1px solid #08090a;
-}
-.foot .foot-content {
-  display: flex;
-  align-items: center;
-}
-.foot .foot-content .foot-map {
-  width: 540px;
-  height: 285px;
-  border-radius: 10px;
-  background-color: #fdfdfd;
-  padding: 5px;
-  box-sizing: border-box;
-  margin-right: 55px;
-}
-.foot .foot-content .foot-map #map {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  border: 2px solid #ededed;
-}
-.foot .foot-content .foot-links {
-  width: 450px;
-  height: 284px;
-  padding-top: 37px;
-}
-.foot .foot-content .foot-links h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.foot .foot-content .foot-links ul {
-  width: 100%;
-  height: 172px;
-  padding-left: 20px;
-}
-.foot .foot-content .foot-links ul li {
-  list-style-type: disc;
-  height: 35px;
-  font-size: 14px;
-  color: #757575;
-}
-.foot .foot-content .foot-links ul li span {
-  font-size: 16px;
-}
-.foot .foot-content .foot-WeChat {
-  width: 266px;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  font-size: 20px;
-  padding-bottom: 70px;
-}
-.foot .foot-content .foot-WeChat .code-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 20px;
-}
-.foot .foot-content .foot-WeChat .code-left p {
-  margin-bottom: 15px;
-}
-.foot .foot-content .foot-WeChat .code-left img {
-  width: 100px;
-  height: 100px;
-}
-.foot .foot-content .foot-WeChat .code-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.foot .foot-content .foot-WeChat .code-right p {
-  margin-bottom: 15px;
-}
-.foot .foot-content .foot-WeChat .code-right img {
-  width: 100px;
-  height: 100px;
-}
-.foot .foot-content .go-top {
-  width: 45px;
-  height: 45px;
-  background-color: #000;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 150px;
-  right: 50px;
-  text-align: center;
-  line-height: 45px;
-  transform: rotate(180deg);
-  font-size: 20px;
-  cursor: pointer;
-}
-.foot .copyright {
-  color: #757575;
-  height: 125px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
