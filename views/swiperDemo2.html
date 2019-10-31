@@ -22,13 +22,14 @@
             height: 300px;
             margin: 100px auto;
             overflow: hidden;
+            position: relative;
         }
 
         .box ul {
             width: 2000px;
             height: 100%;
+            position: absolute;
         }
-
         .box ul li {
             width: 500px;
             height: 300px;
@@ -56,20 +57,19 @@
 <script>
     let list = $(".box ul").children("li")
     let index = 0;
-    let newList = new Array();
-    for(let i = 0; i<list.length;i++){
-        list[i].index = index
-        index++
-        newList.push(list[i])
-    }
-    console.log(newList)
     setInterval(function () {
-        
+        nextPage(true)
     }, 2000)
-    goswiper()
-    function goswiper(){
-        for(let i = 0; i<newList.length;i++){
+    function nextPage(next) {
+        let targetLeft = 0;
+        if(index === 3){
+            index = 1;
+            targetLeft = 0;
+        }else{
+            index++
+            targetLeft = -500*(index)
         }
+        $('.box ul').animate({ left: targetLeft + 'px' })
     }
 </script>
 

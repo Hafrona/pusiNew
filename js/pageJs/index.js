@@ -1,7 +1,8 @@
 $(function () {
     // 轮播图
-    let swiper = function (id,transIndex) {
-        let mySwiper = new Swiper("#"+id, {
+    let swiper = function (id, transIndex) {
+        let familyImg = $(".swiperList").children()
+        let mySwiper = new Swiper("#" + id, {
             loop: true,
             loopedSlides: 5,
             slidesPerView: 'auto',
@@ -41,17 +42,21 @@ $(function () {
                 }
             }
         })
+        for(let i =0; i<familyImg.length;i++){
+            // familyImg[i]
+        }
     }
+
     // 表单输入框获取焦点改变底部边框颜色
-    $('.get-user-message input').on('focus',function(){
-        $(this).parents(".get-user-message").css("border-bottom","1px solid #2e91bd")
+    $('.get-user-message input').on('focus', function () {
+        $(this).parents(".get-user-message").css("border-bottom", "1px solid #2e91bd")
     })
     // 表单输入框失去焦点改变底部边框颜色
-    $('.get-user-message input').blur('focus',function(){
-        $(this).parents(".get-user-message").css("border-bottom","1px solid #c2c2c2")
+    $('.get-user-message input').blur('focus', function () {
+        $(this).parents(".get-user-message").css("border-bottom", "1px solid #c2c2c2")
     })
     // 璞思大家庭轮播图 
-    swiper('familiarSwiper',190)
+    swiper('familiarSwiper', 190)
     // 关于我们轮播图
-    swiper('certify',518);
+    swiper('certify', 518);
 })
