@@ -1,0 +1,679 @@
+/*
+*   内容样式
+*   content-javaEE              javaEE简介
+*   content-ui                  UI简介
+*   content-curriculum          java,UI,WEB介绍
+*   content-chicken-soup        鸡汤
+*   content-news                学校新闻
+*   content-theSchool           学校风采
+*   content-pusi-familiar       璞思大家庭
+*   content-registration-process    报名流程
+*   content-abount-us           关于我们
+*   foot                        底部样式
+*/
+.content .content-curriculum {
+  border: 1px solid #050505;
+  background-color: var(--themeBackgroundColor);
+  height: 550px;
+}
+.content .content-curriculum .curriculum {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.content .content-curriculum .curriculum .curriculum-introduce {
+  width: 95%;
+  height: 65%;
+  background-color: #424242;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 15px;
+  position: relative;
+}
+.content .content-curriculum .curriculum .curriculum-introduce::after {
+  content: " ";
+  width: 98%;
+  height: 2px;
+  background: linear-gradient(to right, #12b1e4, #2e5fbb);
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java .java-title {
+  height: 40%;
+  width: 80%;
+  border-bottom: 1px solid #525252;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java .java-title h2 {
+  font-size: 38px;
+  font-weight: normal;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java .java-title p {
+  font-size: 28px;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java .java-content {
+  border-top: 1px solid #252525;
+  height: 60%;
+  width: 80%;
+  padding-top: 20px;
+  z-index: 100;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java .java-content span {
+  font-size: 18px;
+  color: #ececec;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java {
+  position: relative;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java::after {
+  content: " ";
+  width: 1px;
+  height: 80%;
+  background-color: #252525;
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-java > p {
+  font-size: 120px;
+  position: absolute;
+  bottom: -25px;
+  right: -3px;
+  color: #515050;
+  opacity: 0.9;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-UI::before {
+  content: " ";
+  width: 1px;
+  height: 80%;
+  background-color: #505050;
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-WEB::before {
+  content: " ";
+  width: 1px;
+  height: 80%;
+  background-color: #505050;
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+.content .content-curriculum .curriculum .curriculum-introduce .curriculum-WEB::after {
+  display: none;
+}
+.content .content-curriculum .curriculum .curriculum-nav {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-curriculum .curriculum .curriculum-nav ul {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-curriculum .curriculum .curriculum-nav ul li {
+  height: 30px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.content .content-curriculum .curriculum .curriculum-nav ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  font-size: 16px;
+  border: 1px solid #cecece;
+  border-radius: 25px;
+  background-color: #484848;
+}
+.content .content-chicken-soup {
+  width: 100%;
+  height: 622px;
+  border-bottom: 4px solid #1b1b1b;
+}
+.content .content-chicken-soup .chicken-soup {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside {
+  width: 100%;
+  height: 1400px;
+  border-radius: 50%;
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background-color: #363636;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text h2 {
+  font-size: 34px;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text h3 {
+  font-size: 28px;
+  font-weight: normal;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul {
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul::after {
+  content: " ";
+  width: 45px;
+  height: 2px;
+  background-image: linear-gradient(to right, #315faf, #1ca0d7);
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul li {
+  font-size: 17px;
+  color: #7b7b7b;
+  line-height: 27px;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text ul li:nth-child(3) {
+  margin-bottom: 20px;
+}
+.content .content-chicken-soup .chicken-soup .circle-outside .circle2 .chicken-soup-text > p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.content .title-text,
+.content .theSchool-titile-top {
+  width: 380px;
+  position: relative;
+  text-align: center;
+}
+.content .title-text::after,
+.content .theSchool-titile-top::after {
+  content: " ";
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.content .title-text::before,
+.content .theSchool-titile-top::before {
+  content: " ";
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.content .title-text h2,
+.content .theSchool-titile-top h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+.content .title-text p,
+.content .theSchool-titile-top p {
+  font-size: 12px;
+  color: #279aca;
+  text-align: center;
+}
+.content .content-news {
+  height: 645px;
+}
+.content .content-news .school-news .school-news-title {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-news .school-news .school-news-content {
+  height: 70%;
+  display: flex;
+}
+.content .content-news .school-news .school-news-content .school-news-left {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data {
+  height: 33.3%;
+  width: 90%;
+  display: flex;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data .new-data-photo {
+  width: 13%;
+  height: 80%;
+  background-color: #3b3b3b;
+  margin-right: 40px;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data .news-data-text {
+  height: 100%;
+  border-top: 1px solid #454545;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data .news-data-text .news-text-left {
+  height: 80%;
+  width: 80%;
+  font-size: 16px;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data .news-data-text .news-text-left h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data .news-data-text .news-text-left > p {
+  color: #757575;
+}
+.content .content-news .school-news .school-news-content .school-news-left .new-data .news-data-text .new-time {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.content .content-news .school-news .school-news-content .school-news-photo {
+  width: 40%;
+  height: 80%;
+}
+.content .content-news .school-news .school-news-content .school-news-photo .news-photo {
+  height: 80%;
+}
+.content .content-news .school-news .school-news-content .school-news-photo .news-photo img {
+  width: 100%;
+  height: 100%;
+}
+.content .content-news .school-news .school-news-content .school-news-photo p {
+  height: 20%;
+  font-size: 20px;
+  color: #333;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.content .content-theSchool {
+  height: 607px;
+  background-color: var(--themeBackgroundColor);
+}
+.content .content-theSchool .theSchool {
+  height: 100%;
+  position: relative;
+}
+.content .content-theSchool .theSchool::after {
+  content: " ";
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, rgba(50, 86, 150, 0) 0%, rgba(50, 86, 150, 0.2) 10%, rgba(50, 86, 150, 0.6) 20%, rgba(50, 86, 150, 0.8) 30%, rgba(50, 86, 150, 0.9) 40%, rgba(38, 144, 189, 0.9) 50%, rgba(38, 144, 189, 0.8) 60%, rgba(38, 144, 189, 0.6) 70%, rgba(38, 144, 189, 0.3) 80%, rgba(38, 144, 189, 0.2) 90%, rgba(38, 144, 189, 0) 100%);
+  position: absolute;
+  top: 0px;
+}
+.content .content-theSchool .theSchool .theSchool-title {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-theSchool .theSchool .theSchool-title .theSchool-title-text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-theSchool .theSchool .theSchool-title .theSchool-title-text .theSchool-titile-top {
+  margin-bottom: 20px;
+}
+.content .content-theSchool .theSchool .theSchool-title .theSchool-title-text .theSchool-title-bottom {
+  width: 85%;
+  font-size: 16px;
+}
+.content .content-theSchool .theSchool .theSchool-content {
+  height: 70%;
+  display: flex;
+}
+.content .content-theSchool .theSchool .theSchool-content .theSchool-content-photo {
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-theSchool .theSchool .theSchool-content .theSchool-content-photo .box2 {
+  width: 324px;
+  height: 324px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.content .content-theSchool .theSchool .theSchool-content .theSchool-content-photo p {
+  font-size: 16px;
+}
+.content .content-pusi-familiar {
+  height: 662px;
+}
+.content .content-pusi-familiar .pusi-familiar {
+  height: 100%;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-familiar-title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper {
+  height: 80%;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper .swiper-slide {
+  width: 520px;
+  height: 397px;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper .banner_page {
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper .banner_page span {
+  margin: 0 10px;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper h2 {
+  text-align: center;
+}
+.content .content-pusi-familiar .pusi-familiar .pusi-family-swiper #familiarSwiper .swiper-pagination-bullet-active {
+  width: 16px;
+  border-radius: 8px;
+}
+.content .content-registration-process {
+  height: 600px;
+  background-color: var(--themeBackgroundColor);
+  border: 1px solid #000000;
+}
+.content .content-registration-process .registration-process {
+  height: 100%;
+}
+.content .content-registration-process .registration-process .registration-process-title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-registration-process .registration-process .registration-process-form {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-left {
+  width: 30%;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-left .form-left-start {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-left .form-left-start p {
+  font-size: 14px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-left .form-left-start h2 {
+  font-size: 46px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-left .form-left-start::after {
+  content: " ";
+  background-image: url(../../images/bolangxian.png);
+  width: 65px;
+  height: 10px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-left h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+.content .content-registration-process .registration-process .registration-process-form .point-to {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 25px;
+}
+.content .content-registration-process .registration-process .registration-process-form .point-to span {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url(../../images/jiantou.jpg);
+  background-repeat: no-repeat;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right {
+  width: 30%;
+  height: 90%;
+  background-color: #4a4a4a;
+  box-shadow: 0px 18px 8px rgba(37, 37, 37, 0.5);
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right .form-title {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right .form-title h2 {
+  width: 88%;
+  height: 100%;
+  font-weight: normal;
+  font-size: 20px;
+  border-bottom: 1px solid #c2c2c2;
+  display: flex;
+  align-items: center;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 26px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message {
+  height: 17%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-size: 14px;
+  border-bottom: 1px solid #c2c2c2;
+  display: flex;
+  align-items: flex-end;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message span {
+  width: 10%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message span img {
+  margin-left: 4px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message .qq-number {
+  display: inline-block;
+  width: 12px;
+  height: 14px;
+  border: 2px solid #666;
+  border-bottom: 4px solid #666;
+  margin: 0 18px 0 5px;
+  margin-bottom: 10px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message input {
+  width: 90%;
+  height: 60%;
+  color: #fff;
+  font-size: 16px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-user-message input::-webkit-input-placeholder {
+  color: #ecebeb;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject {
+  position: relative;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject input {
+  width: 85%;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject .openSelect {
+  width: 5%;
+  height: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject .openSelect::after {
+  content: " ";
+  width: 2px;
+  position: absolute;
+  left: 25%;
+  bottom: 40%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #aaa;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  right: 0px;
+  width: 150px;
+  border: 1px solid #D4D4D4;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #666;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li {
+  cursor: pointer;
+  padding: 0 10px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li:hover {
+  background-color: #333;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li:last-child span {
+  border-bottom: none;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li span {
+  display: block;
+  padding: 10px 10px;
+  height: 100%;
+  border-bottom: 1px solid #D4D4D4;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .confirm {
+  height: 25%;
+  padding: 10px;
+  font-size: 14px;
+  color: #919191;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .confirm span {
+  display: block;
+  margin-bottom: 10px;
+}
+.content .content-registration-process .registration-process .registration-process-form .form-right form .confirm button {
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to right, #325bad, #1ca1d8);
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+.content .content-abount-us {
+  height: 761px;
+}
+.content .content-abount-us .abount-us .abount-us-title {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.content .content-abount-us .abount-us #certify {
+  height: 75%;
+  position: relative;
+  margin: 0 auto;
+}
+.content .content-abount-us .abount-us #certify .swiper-slide {
+  width: 744px;
+  height: 516px;
+}
+.content .content-abount-us .abount-us #certify .swiper-slide video {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.content .content-abount-us .abount-us #certify .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.content .content-abount-us .abount-us #certify .banner_page {
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+}
+.content .content-abount-us .abount-us #certify .banner_page span {
+  margin: 0 10px;
+}
+.content .content-abount-us .abount-us #certify h2 {
+  text-align: center;
+}
+.content .content-abount-us .abount-us #certify .swiper-pagination-bullet-active {
+  width: 16px;
+  border-radius: 8px;
+}
