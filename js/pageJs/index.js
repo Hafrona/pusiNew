@@ -59,59 +59,65 @@ $(function () {
     swiper('familiarSwiper', 190)
     // 关于我们轮播图
     swiper('certify', 518);
-    //默认参数
-    var defaluts = {
-        select: "select",
-        select_text: "select_text",
-        select_ul: "select_ul"
-    };
-    $.fn.extend({
-        "select": function (options) {
-            var opts = $.extend({}, defaluts, options);
-            return this.each(function () {
-                var $this = $(this);
-                //模拟下拉列表
-                if ($this.data("value") !== undefined && $this.data("value") !== '') {
-                    $this.val($this.data("value"));
-                }
-                var _html = [];
-                _html.push("<div class=\"" + $this.attr('class') + "\">");
-                _html.push("<div class=\"" + opts.select_text + "\">" + $this.find(":selected").text() + "</div>");
-                _html.push("<ul class=\"" + opts.select_ul + "\">");
-                $this.children("option").each(function () {
-                    var option = $(this);
-                    if ($this.data("value") == option.val()) {
-                        _html.push("<li class=\"cur\" data-value=\"" + option.val() + "\">" + option.text() + "</li>");
-                    } else {
-                        _html.push("<li data-value=\"" + option.val() + "\">" + option.text() + "</li>");
-                    }
-                });
-                _html.push("</ul>");
-                _html.push("</div>");
-                var select = $(_html.join(""));
-                var select_text = select.find("." + opts.select_text);
-                var select_ul = select.find("." + opts.select_ul);
-                $this.after(select);
-                $this.hide();
-                //下拉列表操作
-                select.click(function (event) {
-                    $(this).find("." + opts.select_ul).slideToggle().end().siblings("div." + opts.select).find("." + opts.select_ul).slideUp();
-                    event.stopPropagation();
-                });
-                $("body").click(function () {
-                    select_ul.slideUp();
-                });
-                select_ul.on("click", "li", function () {
-                    var li = $(this);
-                    var val = li.addClass("cur").siblings("li").removeClass("cur").end().data("value").toString();
-                    if (val !== $this.val()) {
-                        select_text.text(li.text());
-                        $this.val(val);
-                        $this.attr("data-value", val);
-                    }
-                });
-            });
+    var selectIndex = true;
+    function select() {
+        let ul = $('.subject-select')
+        if (selectIndex) {
+            ul.removeClass('closeUl');
+            ul.addClass('openUl')
+            ul[0].style.display = 'block';
+            selectIndex = false;
+        } else {
+            ul.removeClass('openUl');
+            ul.addClass('closeUl');
+            setTimeout(() => {
+                ul[0].style.display = 'none';
+            }, 100)
+            selectIndex = true;
         }
-    });
-    $('.select').select();
+
+    }
+    // 点击弹出下拉框
+    $('.openSelect').on('click', function () {
+        select()
+    })
+    // 点击弹出下拉框
+    $('.subjectValue').on('click', function () {
+        select()
+    })
+    // 点击选择学科
+    $('.subject-select li').on('click', function () {
+        $('.subjectValue')[0].innerText = $(this)[0].innerText
+        select()
+    })
+    // 点击咨询右上角的关闭按钮关闭咨询面板
+    // $('.linkClose').on('click', () => {
+    //     $('.link-up').css({
+    //         "transform": 'translateX(100%)',
+    //         'transition': 'all,0.5s'
+    //     })
+    //     setTimeout(() => {
+    //         $('.link-up').css({
+    //             'display': 'none'
+    //         })
+    //     }, 500)
+    // })
+    // 点击咨询左边的标签关闭或展开咨询面板
+    var linkIndex = true;
+    $('.linkClose').on('click', () => {
+        if (linkIndex) {
+            $('.link-up').css({
+                "transform": 'translateX(100%)',
+                'transition': 'all,0.5s'
+            })
+            var linkIndex = false;
+        }else{
+            $('.link-up').css({
+                "transform": 'translateX(0)',
+                'transition': 'all,0.5s'
+            })
+            var linkIndex = true;
+        }
+
+    })
 })

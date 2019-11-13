@@ -1,5 +1,5 @@
 $(function () {
-    var pageUrl = JSON.parse(localStorage.getItem('pageUrl'))
+    var pageUrl = localStorage.getItem('pageUrl')
     // 顶部导航栏点击跳转改变样式
     let headerNav = $('.header-nav ul li').children()
     headerNav.each(function () {

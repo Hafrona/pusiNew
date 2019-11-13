@@ -567,8 +567,11 @@
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject {
   position: relative;
 }
-.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject input {
+.content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject p {
+  font-size: 16px;
   width: 85%;
+  height: 50%;
+  cursor: pointer;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject .openSelect {
   width: 5%;
@@ -587,6 +590,7 @@
   border-top: 4px solid #aaa;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul {
+  display: none;
   position: absolute;
   bottom: 0;
   transform: translateY(100%);
@@ -596,10 +600,10 @@
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   background: #666;
+  overflow: hidden;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li {
   cursor: pointer;
-  padding: 0 10px;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li:hover {
   background-color: #333;
@@ -608,6 +612,8 @@
   border-bottom: none;
 }
 .content .content-registration-process .registration-process .registration-process-form .form-right form .get-subject ul li span {
+  margin: 0 auto;
+  width: 75%;
   display: block;
   padding: 10px 10px;
   height: 100%;
@@ -676,4 +682,120 @@
 .content .content-abount-us .abount-us #certify .swiper-pagination-bullet-active {
   width: 16px;
   border-radius: 8px;
+}
+.openUl {
+  animation: openUl 0.3s;
+}
+.closeUl {
+  animation: closeUl 0.3s;
+}
+@keyframes openUl {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 120px;
+  }
+}
+@keyframes closeUl {
+  from {
+    opacity: 1;
+    height: 120px;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+.link-up {
+  position: fixed;
+  right: 0;
+  bottom: 30%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #009aff;
+}
+.link-up > span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  left: -25px;
+  width: 20px;
+  text-align: center;
+  padding: 15px 5px;
+  background-color: #009aff;
+  transform: translateY(-50%);
+}
+.link-up > ul {
+  padding: 0 20px;
+}
+.link-up > ul > li .consult {
+  box-sizing: border-box;
+  padding: 20px 15px 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #666;
+}
+.link-up > ul > li .consult li {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.link-up > ul > li .consult h2 {
+  font-weight: normal;
+  font-size: 24px;
+}
+.link-up > ul > li .consult h3 {
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 8px;
+}
+.link-up > ul > li .recruit-student {
+  border-bottom: 1px solid #666;
+  padding: 10px 0;
+}
+.link-up > ul > li .recruit-student li h2 {
+  font-size: 18px;
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+.link-up > ul > li .recruit-student li a {
+  font-size: 12px;
+  font-weight: 600;
+  height: 100%;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.link-up > ul > li .recruit-student li a:hover {
+  color: #ff6900;
+}
+.link-up > ul > li .recruit-student li a img {
+  margin-right: 5px;
+}
+.link-up > ul > li .recruit-student li p {
+  text-align: center;
+  font-weight: 600;
+}
+.link-up > ul > li .email {
+  display: flex;
+  padding: 20px 0;
+}
+.link-up > ul > li .email span {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+.link-up > ul > li .email ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.link-up > ul > li .email ul li {
+  font-weight: 600;
+  padding-right: 10px;
 }
