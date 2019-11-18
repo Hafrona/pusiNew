@@ -88,6 +88,7 @@ $(function () {
     // 点击选择学科
     $('.subject-select li').on('click', function () {
         $('.subjectValue')[0].innerText = $(this)[0].innerText
+        console.log($(this))
         select()
     })
     // 点击咨询右上角的关闭按钮关闭咨询面板
@@ -110,13 +111,22 @@ $(function () {
                 "transform": 'translateX(100%)',
                 'transition': 'all,0.5s'
             })
-            var linkIndex = false;
+            $('.linkClose i').css({
+                "transform":'rotate(-135deg) translateX(-50%)',
+                'transition': 'all,0.5s'
+            })
+            linkIndex = false;
+
         }else{
             $('.link-up').css({
                 "transform": 'translateX(0)',
                 'transition': 'all,0.5s'
             })
-            var linkIndex = true;
+            $('.linkClose i').css({
+                "transform":'rotate(45deg) translateX(-10%) translateY(3px)',
+                'transition': 'all,0.5s'
+            })
+            linkIndex = true;
         }
 
     })

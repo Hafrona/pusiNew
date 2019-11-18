@@ -65,15 +65,18 @@
                 .message-input {
                     width: 245px;
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
+                    align-items: center;
                     height: 41px;
                     margin-bottom: 20px;
-
+                    background-color: #252525;
+                    border-radius: 20px;
+                    // overflow: hidden;
                     &:nth-child(odd) {
                         margin-right: 40px;
                     }
-
-                    span {
+                    position: relative;
+                    >span {
                         width: 20%;
                         height: 100%;
                         background-color: #fff;
@@ -88,9 +91,78 @@
                         }
                     }
 
+                    p {
+                        width: 65%;
+                        font-size: 16px;
+                        // width: 85%;
+                        height: 50%;
+                        cursor: pointer;
+                        padding-left: 10px;
+                        color: #757575;
+                        font-size: 16px;
+                    }
+
+                    .openSelect {
+                        width: 15%;
+                        height: 50%;
+                        position: relative;
+                        cursor: pointer;
+
+                        &::after {
+                            content: " ";
+                            width: 2px;
+                            position: absolute;
+                            left: 25%;
+                            bottom: 40%;
+                            border-left: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                            border-top: 4px solid #aaa;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        bottom: 0;
+                        transform: translateY(100%);
+                        right: 0px;
+                        width: 150px;
+                        border: 1px solid #D4D4D4;
+                        border-bottom-right-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                        background: #666;
+                        overflow: hidden;
+                        // animation: openSelect 0.5s;
+                        z-index: 100;
+
+                        li {
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #333;
+                            }
+
+                            &:last-child {
+                                span {
+                                    border-bottom: none;
+
+                                }
+                            }
+
+                            span {
+                                margin: 0 auto;
+                                width: 75%;
+                                display: block;
+                                padding: 10px 10px;
+                                height: 100%;
+                                border-bottom: 1px solid #D4D4D4;
+
+                            }
+                        }
+                    }
+
                     input {
                         width: 80%;
-                        background-color: #252525;
                         height: 100%;
                         border-radius: 0 20px 20px 0;
                         padding-left: 10px;
@@ -155,4 +227,35 @@
     border-left: 2px solid #fff;
     border-top: 2px solid #fff;
     transform: rotate(45deg) translateX(-50%) translateY(25%);
+}
+.openUl {
+    animation: openUl 0.3s;
+}
+
+.closeUl {
+    animation: closeUl 0.3s;
+}
+
+@keyframes openUl {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+
+    to {
+        opacity: 1;
+        height: 120px;
+    }
+}
+
+@keyframes closeUl {
+    from {
+        opacity: 1;
+        height: 120px;
+    }
+
+    to {
+        opacity: 0;
+        height: 0;
+    }
 }

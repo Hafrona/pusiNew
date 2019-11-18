@@ -367,6 +367,15 @@
 
                                 >p {
                                     color: #757575;
+                                    overflow: hidden;
+
+                                    text-overflow: ellipsis;
+
+                                    display: -webkit-box;
+
+                                    -webkit-box-orient: vertical;
+
+                                    -webkit-line-clamp: 2;
                                 }
                             }
 
@@ -1008,17 +1017,18 @@
 //                 display: flex;
 //                 background: linear-gradient(to bottom, #fff, #a4e8fd);
 
-//                 span {
-//                     width: 50px;
-//                     height: 50px;
-//                     background-color: #fff;
-//                     margin-right: 10px;
-//                 }
+//                 // span {
+//                 //     width: 50px;
+//                 //     height: 50px;
+//                 //     background-color: #fff;
+//                 //     margin-right: 10px;
+//                 // }
 
 //                 ul {
 //                     display: flex;
 //                     flex-direction: column;
 //                     justify-content: center;
+//                     padding:10px 30px;
 
 //                     li {
 //                         font-weight: 600;
@@ -1033,31 +1043,38 @@
 .link-up {
     position: fixed;
     right: 0;
-    bottom: 30%;
+    bottom: 45%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background-color: #009aff;
+    background-color: rgba(102, 102, 102, .8);
+    z-index: 1000;
     >span {
         display: inline-block;
         position: absolute;
-        top:50%;
+        top: 50%;
         cursor: pointer;
-        left: -25px;
+        left: -29px;
         width: 20px;
         text-align: center;
-        padding:15px 5px;
-        background-color: #009aff;
+        padding: 15px 5px;
+        background-color: rgba(102, 102, 102, .8);
         transform: translateY(-50%);
+
+        i {
+            font-style: normal;
+        }
     }
 
     >ul {
-        padding:0 20px;
+        padding: 0 20px;
+
         >li {
             .consult {
                 box-sizing: border-box;
                 padding: 20px 15px 10px 20px;
                 text-align: center;
                 border-bottom: 1px solid #666;
+
                 li {
                     font-size: 18px;
                     margin-bottom: 5px;
@@ -1078,6 +1095,7 @@
             .recruit-student {
                 border-bottom: 1px solid #666;
                 padding: 10px 0;
+
                 li {
                     h2 {
                         font-size: 18px;
@@ -1094,6 +1112,7 @@
                         align-items: center;
                         justify-content: center;
                         margin-bottom: 10px;
+
                         &:hover {
                             color: #ff6900;
                         }
@@ -1113,7 +1132,8 @@
 
             .email {
                 display: flex;
-                padding:20px 0;
+                padding: 20px 0;
+
                 span {
                     width: 50px;
                     height: 50px;

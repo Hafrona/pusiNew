@@ -38,7 +38,14 @@
                         <span>
                             <img src="../images/xueke.png" alt="">
                         </span>
-                        <input name='subject' type="text" placeholder="所报学科">
+                        <!-- <input name='subject' type="text" placeholder="所报学科"> -->
+                        <p class="subjectValue">所报学科</p>
+                        <i class="openSelect"></i>
+                        <ul class="subject-select">
+                            <li><span>JAVA</span></li>
+                            <li><span>UI</span></li>
+                            <li><span>WEB</span></li>
+                        </ul>
                     </div>
                     <div class="message-input">
                         <span>
@@ -69,5 +76,41 @@
 </body>
 <script src="../js/jquery.js"></script>
 <script src="../js/common.js"></script>
+<script>
+    $(function () {
+    var selectIndex = true;
+        function select() {
+            let ul = $('.subject-select')
+            if (selectIndex) {
+                ul.removeClass('closeUl');
+                ul.addClass('openUl')
+                ul[0].style.display = 'block';
+                selectIndex = false;
+            } else {
+                ul.removeClass('openUl');
+                ul.addClass('closeUl');
+                setTimeout(() => {
+                    ul[0].style.display = 'none';
+                }, 100)
+                selectIndex = true;
+            }
+
+        }
+        // 点击弹出下拉框
+        $('.openSelect').on('click', function () {
+            console.log(123)
+            select()
+        })
+        // 点击弹出下拉框
+        $('.subjectValue').on('click', function () {
+            select()
+        })
+        // 点击选择学科
+        $('.subject-select li').on('click', function () {
+            $('.subjectValue')[0].innerText = $(this)[0].innerText
+            select()
+        })
+    })
+</script>
 
 </html>

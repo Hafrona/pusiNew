@@ -140,12 +140,6 @@
                             .date-year {
                                 padding-left: 10px;
                                 font-size: 25px;
-
-                                span {
-                                    &:last-child {
-                                        margin-left: 5px;
-                                    }
-                                }
                             }
                         }
                     }
@@ -166,6 +160,15 @@
                         .list-right-text {
                             font-size: 20px;
                             color: #d4d1d1;
+                            overflow: hidden;
+
+                            text-overflow: ellipsis;
+
+                            display: -webkit-box;
+
+                            -webkit-box-orient: vertical;
+
+                            -webkit-line-clamp: 2;
                         }
                     }
                 }

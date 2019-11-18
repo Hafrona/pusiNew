@@ -55,14 +55,18 @@
 .content .forecast-name .forecast-name-content .forecast-user-message .message-input {
   width: 245px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   height: 41px;
   margin-bottom: 20px;
+  background-color: #252525;
+  border-radius: 20px;
+  position: relative;
 }
 .content .forecast-name .forecast-name-content .forecast-user-message .message-input:nth-child(odd) {
   margin-right: 40px;
 }
-.content .forecast-name .forecast-name-content .forecast-user-message .message-input span {
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input > span {
   width: 20%;
   height: 100%;
   background-color: #fff;
@@ -72,12 +76,66 @@
   justify-content: flex-end;
   align-items: center;
 }
-.content .forecast-name .forecast-name-content .forecast-user-message .message-input span img {
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input > span img {
   margin-right: 10px;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input p {
+  width: 65%;
+  height: 50%;
+  cursor: pointer;
+  padding-left: 10px;
+  color: #757575;
+  font-size: 16px;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input .openSelect {
+  width: 15%;
+  height: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input .openSelect::after {
+  content: " ";
+  width: 2px;
+  position: absolute;
+  left: 25%;
+  bottom: 40%;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #aaa;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input ul {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  right: 0px;
+  width: 150px;
+  border: 1px solid #D4D4D4;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #666;
+  overflow: hidden;
+  z-index: 100;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input ul li {
+  cursor: pointer;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input ul li:hover {
+  background-color: #333;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input ul li:last-child span {
+  border-bottom: none;
+}
+.content .forecast-name .forecast-name-content .forecast-user-message .message-input ul li span {
+  margin: 0 auto;
+  width: 75%;
+  display: block;
+  padding: 10px 10px;
+  height: 100%;
+  border-bottom: 1px solid #D4D4D4;
 }
 .content .forecast-name .forecast-name-content .forecast-user-message .message-input input {
   width: 80%;
-  background-color: #252525;
   height: 100%;
   border-radius: 0 20px 20px 0;
   padding-left: 10px;
@@ -130,4 +188,30 @@
   border-left: 2px solid #fff;
   border-top: 2px solid #fff;
   transform: rotate(45deg) translateX(-50%) translateY(25%);
+}
+.openUl {
+  animation: openUl 0.3s;
+}
+.closeUl {
+  animation: closeUl 0.3s;
+}
+@keyframes openUl {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 120px;
+  }
+}
+@keyframes closeUl {
+  from {
+    opacity: 1;
+    height: 120px;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
 }

@@ -119,9 +119,6 @@
   padding-left: 10px;
   font-size: 25px;
 }
-.content .dynamic-news .news .news-list .news-list-content .list-time .list-time-date .date-year span:last-child {
-  margin-left: 5px;
-}
 .content .dynamic-news .news .news-list .news-list-content .list-right {
   width: 75%;
   display: flex;
@@ -137,6 +134,11 @@
 .content .dynamic-news .news .news-list .news-list-content .list-right .list-right-text {
   font-size: 20px;
   color: #d4d1d1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .go-top {
   width: 45px;
