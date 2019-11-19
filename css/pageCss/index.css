@@ -714,9 +714,6 @@
     height: 0;
   }
 }
-
-
-
 /* 右边联系面板 */
 .link-up {
   position: fixed;
@@ -735,8 +732,8 @@
   position: absolute;
   top: 50%;
   cursor: pointer;
-  left: -29px;
-  width: 20px;
+  left: -24px;
+  width: 15px;
   text-align: center;
   padding: 15px 5px;
   background-color: rgba(102, 102, 102, 0.8);
@@ -748,12 +745,12 @@
   display: block;
   width: 10px;
   height: 10px;
-  border-top:1px solid #fff;
+  border-top: 1px solid #fff;
   border-right: 1px solid #fff;
   border-left: 1px solid transparent;
   border-bottom: 1px solid transparent;
   transform: rotate(45deg) translateX(10%) translateY(3px);
-  margin-top:5px;
+  margin-top: 5px;
 }
 .link-up > ul {
   padding: 0 20px;
@@ -825,53 +822,49 @@
   font-weight: 600;
   padding-right: 10px;
 }
-
 /* 左下角留言面板 */
-.left-bottom-form{
+.left-bottom-form {
+  display: none;
   width: 240px;
   /* height: 500px; */
-  background-color:#ededed;
+  background-color: #ededed;
   position: fixed;
   bottom: 0px;
-  left:0px;
+  left: 0px;
   z-index: 1000;
 }
-.left-bottom-form-title{
+.left-bottom-form-title {
   padding: 10px 10px;
   background-color: #0094ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.left-bottom-form-title h2{
-
-}
-.left-bottom-form-title span{
+.left-bottom-form-title span {
   display: inline-block;
   width: 25px;
   height: 25px;
   /* background-color: #fff; */
   position: relative;
 }
-.left-bottom-form-title span::after{
-  content:' ';
+.left-bottom-form-title span::after {
+  content: ' ';
   width: 100%;
   height: 2px;
   background-color: #fff;
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
-.company{
-  padding:15px 10px;
+.company {
+  padding: 15px 10px;
   font-size: 14px;
-  border-bottom:1px solid #999;
+  border-bottom: 1px solid #999;
 }
-.company p{
+.company p {
   color: #666;
-  
 }
-.company span{
+.company span {
   color: #999;
 }
